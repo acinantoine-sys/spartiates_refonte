@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Le club – Les Spartiates d’Amiens</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+.pg{font-family:'Barlow',system-ui,sans-serif;color:#060640;background:#ffffff}
+.disp{font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.cond{font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.btn-y{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:#fcc409;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #fcc409}
+.btn-y:hover{background:#ffd84d;border-color:#ffd84d}
+.btn-o{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #ffffff}
+.btn-o:hover{background:#ffffff;color:#060640}
+.btn-n{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:#060640;color:#fcc409;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #060640}
+.btn-n:hover{background:#0e0e6a;border-color:#0e0e6a}
+.btn-n2{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #060640}
+.btn-n2:hover{background:#060640;color:#ffffff}
+.navlink{display:inline-flex;align-items:center;min-height:44px;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase;border-bottom:3px solid transparent}
+.navlink:hover{color:#fcc409}
+.navlink-on{color:#fcc409;border-bottom-color:#fcc409}
+.tlink{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:16px}
+.tlink:hover{text-decoration:underline}
+</style>
+</helmet>
+<div class="pg" id="top">
+
+  <!-- EN-TÊTE -->
+  <header style="background:#060640;border-bottom:3px solid #fcc409">
+    <div style="max-width:1320px;margin:0 auto;padding:14px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+      <a href="Main.dc.html" aria-label="Les Spartiates d’Amiens, accueil" style="display:flex;align-items:center;gap:14px">
+        <img src="../../assets/logo/logo-spartiates.png" alt="" style="width:64px;height:64px;display:block">
+        <span class="disp" style="color:#ffffff;font-size:28px;line-height:.95;display:block">Les Spartiates<span style="display:block;color:#fcc409;font-size:22px;letter-spacing:.08em">d’Amiens</span></span>
+      </a>
+      <nav aria-label="Navigation principale" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 28px">
+        <a class="navlink" href="Football.dc.html">Football américain</a>
+        <a class="navlink" href="Flag.dc.html">Flag</a>
+        <a class="navlink" href="Cheerleading.dc.html">Cheerleading</a>
+        <a class="navlink" href="PageCalendrier.dc.html">Calendrier</a>
+        <a class="navlink navlink-on" href="Club.dc.html" aria-current="page">Le club</a>
+        <a class="navlink" href="Contact.dc.html">Contact</a>
+      </nav>
+      <dc-import name="LienAdhesion" variant="yellow" label="Nous rejoindre" hint-size="230px,52px"></dc-import>
+    </div>
+  </header>
+
+  <!-- TITRE DE PAGE -->
+  <section style="background:#060640;color:#ffffff;padding:56px 32px 0">
+    <div style="max-width:1320px;margin:0 auto">
+      <div class="cond" style="font-size:16px;letter-spacing:.18em;color:rgba(255,255,255,.8)"><a href="Main.dc.html" style="text-decoration:underline">Accueil</a> <span style="color:#fcc409">/</span> Le club</div>
+      <h1 class="disp" style="margin:16px 0 20px;font-size:clamp(56px,9vw,128px);line-height:.9">Le club <span style="color:#fcc409">historique</span></h1>
+      <p style="margin:0;max-width:680px;font-size:20px;line-height:1.55;color:rgba(255,255,255,.84)">L’un des premiers clubs de football américain en France, un palmarès riche dans plusieurs disciplines et une association portée par ses bénévoles.</p>
+    </div>
+    <svg width="100%" height="18" aria-hidden="true" style="display:block;margin-top:56px"><defs><pattern id="mH" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mH)"/></svg>
+  </section>
+
+  <!-- HISTOIRE : INTRODUCTION -->
+  <section style="background:#0a0a4d;color:#ffffff;padding:96px 32px 40px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:56px">
+      <div style="flex:1 1 480px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#fcc409">Notre histoire</div>
+        <h2 class="disp" style="margin:12px 0 28px;font-size:clamp(44px,6vw,80px);line-height:.95">L’un des premiers clubs de football américain <span style="color:#fcc409">en France</span></h2>
+        <p style="margin:0 0 20px;max-width:600px;font-size:19px;line-height:1.65;color:rgba(255,255,255,.88)">Fondé en 1987, le club des Spartiates d’Amiens Picardie est l’un des clubs historiques du football américain en France. Il est né de la rencontre entre Marc Gambetti, ancien joueur des Iroquois de Rouen, et Xavier Thuilot, passionné de sports américains.</p>
+        <p style="margin:0;max-width:600px;font-size:19px;line-height:1.65;color:rgba(255,255,255,.88)">En raison de sa situation géographique, le club a mis un point d’honneur à intégrer la formation des jeunes joueurs dans son plan de développement. Une stratégie qui a porté ses fruits.</p>
+      </div>
+      <div style="flex:1 1 420px;min-width:0">
+        <div class="disp" style="font-size:clamp(120px,18vw,260px);line-height:.8;color:#fcc409;margin-bottom:-12px">1987</div>
+        <div style="min-height:360px;background:#0e0e6a;border:2px solid #fcc409;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px">
+          <div class="cond" style="color:rgba(255,255,255,.85);font-size:18px;max-width:260px;line-height:1.3">[Photo d’archives — premiers matchs du club]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTOIRE : FRISE CHRONOLOGIQUE -->
+  <section style="background:#0a0a4d;color:#ffffff;padding:40px 32px 104px">
+    <div style="max-width:1320px;margin:0 auto">
+      <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="6">
+        <div style="display:flex;flex-wrap:wrap;gap:12px 40px;padding:28px 0;border-top:1px solid rgba(255,255,255,.28)">
+          <div class="disp" style="flex:0 0 300px;font-size:56px;line-height:1;color:#fcc409">{{ t.year }}</div>
+          <div style="flex:1 1 360px;min-width:0">
+            <h3 style="margin:0 0 8px;font-size:26px;line-height:1.25;font-weight:700">{{ t.title }}</h3>
+            <p style="margin:0;max-width:720px;font-size:18px;line-height:1.6;color:rgba(255,255,255,.86)">{{ t.text }}</p>
+          </div>
+        </div>
+      </sc-for>
+      <div style="border-top:1px solid rgba(255,255,255,.28)"></div>
+    </div>
+  </section>
+
+  <!-- PALMARÈS PAR DISCIPLINE -->
+  <section id="palmares" style="background:#f3f4f9;padding:104px 32px">
+    <div style="max-width:1320px;margin:0 auto">
+      <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#3b3b6b">Palmarès</div>
+      <h2 class="disp" style="margin:12px 0 40px;font-size:clamp(44px,6vw,80px);line-height:.95">Des titres, <span style="background:#fcc409;padding:0 10px">dans chaque discipline</span></h2>
+
+      <div style="display:flex;flex-wrap:wrap;gap:24px;margin-bottom:48px">
+        <div style="flex:1 1 260px;background:#060640;color:#ffffff;padding:28px 32px">
+          <div class="disp" style="font-size:clamp(72px,8vw,112px);line-height:.9;color:#fcc409">10</div>
+          <div style="font-size:19px;font-weight:600">titres nationaux, toutes catégories</div>
+        </div>
+        <div style="flex:1 1 260px;background:#060640;color:#ffffff;padding:28px 32px">
+          <div class="disp" style="font-size:clamp(72px,8vw,112px);line-height:.9;color:#fcc409">6</div>
+          <div style="font-size:19px;font-weight:600">finales nationales disputées</div>
+        </div>
+        <div style="flex:1 1 260px;background:#060640;color:#ffffff;padding:28px 32px">
+          <div class="disp" style="font-size:clamp(48px,5.5vw,76px);line-height:1;color:#fcc409">Europe</div>
+          <div style="font-size:19px;font-weight:600;margin-top:6px">Quart de finale d’Eurobowl, demi-finale d’EFAF Cup</div>
+        </div>
+      </div>
+
+      <article style="background:#060640;color:#ffffff;margin-bottom:24px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;padding:28px 36px;border-bottom:4px solid #fcc409">
+          <div style="flex:0 0 56px;height:56px;background:#fcc409;display:flex;align-items:center;justify-content:center">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#060640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="16" cy="16" rx="13" ry="8" transform="rotate(-35 16 16)"/><path d="M12.5 19.5l7-7M14.5 14.5l2 2M17 12l2 2M12 17l2 2"/></svg>
+          </div>
+          <h3 class="disp" style="margin:0;font-size:clamp(34px,4vw,52px);line-height:1">Football américain · Seniors</h3>
+          <span class="cond" style="margin-left:auto;font-size:22px;color:#fcc409">6 titres de champion de France</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap">
+          <div style="flex:1 1 380px;min-width:0;padding:32px 36px">
+            <div class="cond" style="font-size:18px;letter-spacing:.18em;color:rgba(255,255,255,.82);margin-bottom:12px">Champion de France D1</div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px 32px">
+              <span class="disp" style="font-size:clamp(56px,7vw,96px);line-height:1;color:#fcc409">2004</span>
+              <span class="disp" style="font-size:clamp(56px,7vw,96px);line-height:1;color:#fcc409">2010</span>
+              <span class="disp" style="font-size:clamp(56px,7vw,96px);line-height:1;color:#fcc409">2012</span>
+            </div>
+          </div>
+          <div style="flex:1 1 380px;min-width:0;padding:32px 36px;border-left:1px solid rgba(255,255,255,.22)">
+            <div class="cond" style="font-size:18px;letter-spacing:.18em;color:rgba(255,255,255,.82);margin-bottom:12px">Champion de France D2</div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px 32px">
+              <span class="disp" style="font-size:clamp(56px,7vw,96px);line-height:1;color:#fcc409">1997</span>
+              <span class="disp" style="font-size:clamp(56px,7vw,96px);line-height:1;color:#fcc409">2018</span>
+              <span class="disp" style="font-size:clamp(56px,7vw,96px);line-height:1;color:#fcc409">2026</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:stretch">
+        <sc-for list="{{ disciplines }}" as="d" hint-placeholder-count="3">
+          <article style="flex:1 1 340px;min-width:0;background:#ffffff;display:flex;flex-direction:column">
+            <div style="display:flex;align-items:center;gap:14px;padding:22px 28px;border-bottom:4px solid #fcc409">
+              <div style="flex:0 0 52px;height:52px;background:#060640;display:flex;align-items:center;justify-content:center">
+                <sc-if value="{{ d.isFoot }}" hint-placeholder-val="{{ true }}">
+                  <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="16" cy="16" rx="13" ry="8" transform="rotate(-35 16 16)"/><path d="M12.5 19.5l7-7M14.5 14.5l2 2M17 12l2 2M12 17l2 2"/></svg>
+                </sc-if>
+                <sc-if value="{{ d.isFlag }}" hint-placeholder-val="{{ false }}">
+                  <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v24M8 6h16l-4 5 4 5H8"/></svg>
+                </sc-if>
+                <sc-if value="{{ d.isCheer }}" hint-placeholder-val="{{ false }}">
+                  <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h6l12-6v20l-12-6H4z"/><path d="M10 20l2 7h3l-1.5-7"/><path d="M25 12a6 6 0 010 8"/></svg>
+                </sc-if>
+              </div>
+              <h3 class="disp" style="margin:0;font-size:34px;line-height:1">{{ d.name }}</h3>
+            </div>
+            <div style="padding:8px 28px 24px">
+              <sc-for list="{{ d.entries }}" as="e" hint-placeholder-count="3">
+                <div style="display:flex;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid #d9daea">
+                  <span class="disp" style="flex:0 0 84px;font-size:34px;line-height:1">{{ e.year }}</span>
+                  <span style="font-size:18px;font-weight:600;line-height:1.35">{{ e.label }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIE ASSOCIATIVE ET BÉNÉVOLES -->
+  <section id="benevoles" style="background:#fcc409;color:#060640;padding:104px 32px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:56px">
+      <div style="flex:1 1 420px;min-width:0">
+        <div style="position:relative">
+          <img src="../../assets/images/club-benevoles-mosaique.jpg" alt="Bénévoles des Spartiates un jour de match : deux bénévoles souriantes à la buvette, deux bénévoles au barbecue et des supporters au bord du terrain" style="display:block;width:100%;height:auto">
+          <div class="disp" style="position:absolute;left:0;bottom:0;background:#fcc409;color:#060640;padding:12px 22px;font-size:clamp(22px,2.4vw,32px);line-height:1">Nos bénévoles en action</div>
+        </div>
+      </div>
+      <div style="flex:1 1 480px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em">Vie associative</div>
+        <h2 class="disp" style="margin:12px 0 24px;font-size:clamp(44px,6vw,80px);line-height:.95">Le cœur du club : ses bénévoles</h2>
+        <p style="margin:0 0 18px;max-width:560px;font-size:19px;line-height:1.65">Les Spartiates sont avant tout une association. Toute la saison, et les jours de match en particulier, des bénévoles donnent de leur temps pour que le club vive : accueillir le public, organiser les rencontres, accompagner les jeunes.</p>
+        <p style="margin:0 0 36px;max-width:560px;font-size:19px;line-height:1.65;font-weight:600">Sans eux, pas de Spartiates.</p>
+
+        <div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:20px 36px;margin-bottom:40px">
+          <div>
+            <div class="cond" style="font-size:16px;letter-spacing:.14em">Environ</div>
+            <div class="disp" style="font-size:64px;line-height:.95">40</div>
+            <div style="font-size:17px;font-weight:600">bénévoles actifs</div>
+          </div>
+          <div>
+            <div class="cond" style="font-size:16px;letter-spacing:.14em">Environ</div>
+            <div class="disp" style="font-size:64px;line-height:.95">300</div>
+            <div style="font-size:17px;font-weight:600">licenciés</div>
+          </div>
+          <div>
+            <div class="disp" style="font-size:64px;line-height:.95">[XX]</div>
+            <div style="font-size:17px;font-weight:600">jours de match par saison</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <dc-import name="LienAdhesion" variant="navy" label="Devenir bénévole" hint-size="260px,52px"></dc-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU PARTENAIRES (commun à toutes les pages) -->
+  <dc-import name="Partenaires" hint-size="100%,640px"></dc-import>
+
+  <!-- PIED DE PAGE -->
+  <footer style="background:#060640;color:#ffffff">
+    <svg width="100%" height="18" aria-hidden="true" style="display:block"><defs><pattern id="mG" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mG)"/></svg>
+    <div style="max-width:1320px;margin:0 auto;padding:64px 32px 32px">
+      <div style="display:flex;flex-wrap:wrap;gap:48px 56px">
+        <div style="flex:1 1 280px;min-width:0">
+          <img src="../../assets/logo/logo-spartiates.png" alt="Logo des Spartiates d’Amiens" style="width:120px;height:120px;display:block;margin-bottom:20px">
+          <div class="disp" style="font-size:30px;line-height:1">Force · Passion · <span style="color:#fcc409">Volonté</span></div>
+          <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.8)">Club associatif de football américain, flag et cheerleading, fondé à Amiens en 1987.</p>
+        </div>
+        <div style="flex:1 1 260px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:14px">Le bureau</div>
+          <div style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.9)">Stade du Grand Marais<br>37 Rue du Grand Marais<br>80080 Amiens<br>03 22 52 99 24<br>secretariat@lesspartiates.com</div>
+          <div style="margin-top:14px"><dc-import name="Horaires" variant="bureau-footer" hint-size="100%,52px"></dc-import></div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Le club</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="Football.dc.html">Football américain</a>
+            <a class="tlink" href="Flag.dc.html">Flag</a>
+            <a class="tlink" href="Cheerleading.dc.html">Cheerleading</a>
+            <dc-import name="LienAdhesion" variant="link" label="Nous rejoindre" hint-size="160px,44px"></dc-import>
+          </div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Suivez-nous</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="https://www.instagram.com/spartiatesfoot/">Instagram</a>
+            <a class="tlink" href="https://www.facebook.com/spartiatesfoot/">Facebook</a>
+            <a class="tlink" href="https://www.youtube.com/@LesSpartiatesdAmiens">YouTube</a>
+            <a class="tlink" href="https://www.tiktok.com/@spartiatesamiens">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:rgba(255,255,255,.8)">
+        <span>© Les Spartiates d’Amiens 2026</span>
+        <span style="display:flex;flex-wrap:wrap;gap:4px 24px">
+          <a class="tlink" href="https://lesspartiates.com/mentions-legales" style="min-height:32px;font-size:14px">Mentions légales</a>
+          <a class="tlink" href="https://www.fffa.org/actualites/" style="min-height:32px;font-size:14px">Fédération Française de Football Américain</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4800}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const timeline = [
+      { year: '1987', title: 'Naissance du club à Amiens', text: 'Marc Gambetti, ancien joueur des Iroquois de Rouen, et Xavier Thuilot, passionné de sports américains, fondent les Spartiates d’Amiens Picardie.' },
+      { year: '1988', title: 'Premiers pas en 2ème Division', text: 'Le club débute en compétition dès l’année suivant sa création, en 2ème Division.' },
+      { year: '1997', title: 'Premier titre national : le Casque d’Or', text: 'Champions de France de Division 2, les Spartiates remportent leur premier titre national, le Casque d’Or, après avoir rapidement gravi les échelons.' },
+      { year: '1998', title: 'Cap sur la Division 1 Élite', text: 'Ce titre ouvre les portes de la Division 1 Élite dès la saison suivante.' },
+      { year: '1999', title: 'Champions de France U19', text: 'La formation des jeunes porte ses fruits : premier titre de champion de France U19.' },
+      { year: '[Année]', title: 'Le club s’illustre en Europe', text: 'Les Spartiates participent à plusieurs compétitions européennes et atteignent un quart de finale d’Eurobowl et une demi-finale d’EFAF Cup.' },
+      { year: '2004', title: 'Champions de France de Division 1', text: 'Les Spartiates décrochent un premier titre de champion de France de Division 1.' },
+      { year: '2009', title: 'Champions de France Senior en Flag', text: 'Le club décroche le titre de champion de France Senior en Flag.' },
+      { year: '2010 & 2012', title: 'Deux nouveaux sacres en Division 1', text: 'Le club s’impose à nouveau en Division 1, en 2010 puis en 2012. Les U19 sont aussi champions de France en 2010 et 2011.' },
+      { year: '2018', title: 'Champions de France de Division 2', text: 'Les Spartiates remportent le titre de champion de France de Division 2.' },
+      { year: '2023', title: 'Une nouvelle page s’écrit', text: 'Julien Planchon devient président du club. L’équipe senior est entraînée par Arnaud Leprêtre, ancien joueur de l’équipe senior et de l’équipe de France de football américain.' },
+      { year: '2025', title: 'Les jeunes confirment', text: 'Les U17 remportent le titre de champion territorial d’Île-de-France.' },
+      { year: '2026', title: 'Champions de France de Division 2', text: 'Les Spartiates décrochent un nouveau titre de champion de France de Division 2.' }
+    ];
+    const disciplines = [
+      {
+        isFoot: true, isFlag: false, isCheer: false, name: 'Football · Jeunes',
+        entries: [
+          { year: '2025', label: 'Champion territorial Île-de-France U17' },
+          { year: '2011', label: 'Champion de France Football U19' },
+          { year: '2010', label: 'Champion de France Football U19' },
+          { year: '1999', label: 'Champion de France Football U19' }
+        ]
+      },
+      {
+        isFoot: false, isFlag: true, isCheer: false, name: 'Flag',
+        entries: [
+          { year: '2009', label: 'Champion de France Senior' }
+        ]
+      },
+      {
+        isFoot: false, isFlag: false, isCheer: true, name: 'Cheerleading',
+        entries: [
+          { year: '2026', label: 'SALC, Juniors : 2e place et qualification aux championnats d’Europe' },
+          { year: '2026', label: 'Qualifications au championnat de France, Juniors : 3e place' },
+          { year: '2025', label: 'Qualifications aux championnats de France, Juniors : 4e place' },
+          { year: '2024', label: 'Open Cheer Center, Juniors : 2e place' }
+        ]
+      }
+    ];
+    return { timeline, disciplines };
+  }
+}
+</script>
+</body>
+</html>

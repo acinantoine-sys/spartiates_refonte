@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Flag – Les Spartiates d’Amiens</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+.pg{font-family:'Barlow',system-ui,sans-serif;color:#060640;background:#ffffff}
+.disp{font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.cond{font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.btn-y{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:#fcc409;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #fcc409}
+.btn-y:hover{background:#ffd84d;border-color:#ffd84d}
+.btn-o{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #ffffff}
+.btn-o:hover{background:#ffffff;color:#060640}
+.navlink{display:inline-flex;align-items:center;min-height:44px;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase;border-bottom:3px solid transparent}
+.navlink:hover{color:#fcc409}
+.navlink-on{color:#fcc409;border-bottom-color:#fcc409}
+.tlink{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:16px}
+.tlink:hover{text-decoration:underline}
+.ben{background:#f3f4f9;padding:26px 24px;display:flex;flex-direction:column;gap:12px}
+</style>
+</helmet>
+<div class="pg" id="top">
+
+  <!-- EN-TÊTE -->
+  <header style="background:#060640;border-bottom:3px solid #fcc409">
+    <div style="max-width:1320px;margin:0 auto;padding:14px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+      <a href="Main.dc.html" aria-label="Les Spartiates d’Amiens, accueil" style="display:flex;align-items:center;gap:14px">
+        <img src="../../assets/logo/logo-spartiates.png" alt="" style="width:64px;height:64px;display:block">
+        <span class="disp" style="color:#ffffff;font-size:28px;line-height:.95;display:block">Les Spartiates<span style="display:block;color:#fcc409;font-size:22px;letter-spacing:.08em">d’Amiens</span></span>
+      </a>
+      <nav aria-label="Navigation principale" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 28px">
+        <a class="navlink" href="Football.dc.html">Football américain</a>
+        <a class="navlink navlink-on" href="Flag.dc.html" aria-current="page">Flag</a>
+        <a class="navlink" href="Cheerleading.dc.html">Cheerleading</a>
+        <a class="navlink" href="PageCalendrier.dc.html">Calendrier</a>
+        <a class="navlink" href="Club.dc.html">Le club</a>
+        <a class="navlink" href="Contact.dc.html">Contact</a>
+      </nav>
+      <dc-import name="LienAdhesion" variant="yellow" label="Nous rejoindre" hint-size="230px,52px"></dc-import>
+    </div>
+  </header>
+
+  <!-- HÉROS -->
+  <section style="background:#060640;color:#ffffff;padding:72px 32px 104px;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:56px">
+      <div style="flex:1 1 520px;min-width:0">
+        <div class="cond" style="color:#fcc409;font-size:18px;letter-spacing:.22em">Flag football · Filles et garçons</div>
+        <h1 class="disp" style="margin:16px 0 28px;font-size:clamp(56px,8.6vw,126px);line-height:.9">
+          <span style="display:block">Le flag,</span>
+          <span style="display:block">vos enfants</span>
+          <span style="display:block;color:#fcc409">vont adorer</span>
+        </h1>
+        <p style="margin:0 0 36px;max-width:560px;font-size:20px;line-height:1.55;color:rgba(255,255,255,.86)">Un sport d’équipe mixte, sans contact, accessible dès 8 ans : on court, on esquive, on réfléchit ensemble. L’énergie du football américain, sans les plaquages.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <dc-import name="LienAdhesion" variant="yellow" label="Inscrire mon enfant" hint-size="270px,52px"></dc-import>
+          <a class="btn-o" href="#pourquoi">Pourquoi le flag ?</a>
+        </div>
+      </div>
+      <div style="flex:1 1 420px;min-width:0">
+        <div style="position:relative;height:580px;margin:0 22px 34px 22px">
+          <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:#fcc409;clip-path:polygon(16% 0,100% 0,84% 100%,0 100%);transform:translate(-22px,22px)"></div>
+          <img src="../../assets/images/flag-joueur-action.jpg" alt="Un joueur des Spartiates en action, le flag orange accroché à la ceinture" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;display:block;clip-path:polygon(16% 0,100% 0,84% 100%,0 100%)">
+          <div style="position:absolute;right:-14px;bottom:-34px;width:152px;height:152px;border-radius:50%;background:#fcc409;color:#060640;border:4px solid #060640;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-8deg)">
+            <span class="disp" style="font-size:28px;line-height:1">Dès</span>
+            <span class="disp" style="font-size:54px;line-height:.9">8 ans</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- L'ESSENTIEL EN UN COUP D'ŒIL -->
+  <section style="background:#fcc409;color:#060640;padding:48px 32px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px 40px">
+      <div style="flex:1 1 250px;min-width:0;display:flex;gap:16px;align-items:flex-start">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#060640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div>
+          <div class="disp" style="font-size:34px;line-height:1">Dès 8 ans</div>
+          <div style="font-size:17px;line-height:1.4;margin-top:4px">Pour les enfants à partir de 8 ans</div>
+        </div>
+      </div>
+      <div style="flex:1 1 250px;min-width:0;display:flex;gap:16px;align-items:flex-start">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#060640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5"/><path d="M14 15c3 0 8 1 8 5"/></svg>
+        <div>
+          <div class="disp" style="font-size:34px;line-height:1">Mixte</div>
+          <div style="font-size:17px;line-height:1.4;margin-top:4px">Filles et garçons dans la même équipe</div>
+        </div>
+      </div>
+      <div style="flex:1 1 250px;min-width:0;display:flex;gap:16px;align-items:flex-start">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#060640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+        <div>
+          <div class="disp" style="font-size:34px;line-height:1">Sans contact</div>
+          <div style="font-size:17px;line-height:1.4;margin-top:4px">On attrape un flag, on ne plaque pas</div>
+        </div>
+      </div>
+      <div style="flex:1 1 250px;min-width:0;display:flex;gap:16px;align-items:flex-start">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#060640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3"/></svg>
+        <div>
+          <div class="disp" style="font-size:34px;line-height:1">Olympique en 2028</div>
+          <div style="font-size:17px;line-height:1.4;margin-top:4px">Aux Jeux de Los Angeles</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI LE FLAG -->
+  <section id="pourquoi" style="background:#ffffff;padding:104px 32px;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:56px">
+      <div style="flex:1 1 380px;min-width:0">
+        <div style="position:relative;height:640px;margin:0 22px 22px 22px">
+          <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:#fcc409;clip-path:polygon(0 0,84% 0,100% 100%,16% 100%);transform:translate(22px,22px)"></div>
+          <img src="../../assets/images/flag-sprint-nuit.jpg" alt="Un joueur de flag en plein sprint, de nuit, flags à la ceinture" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:30% 60%;display:block;clip-path:polygon(0 0,84% 0,100% 100%,16% 100%)">
+        </div>
+      </div>
+      <div style="flex:1 1 560px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#3b3b6b">Pour votre enfant</div>
+        <h2 class="disp" style="margin:12px 0 18px;font-size:clamp(44px,5.6vw,76px);line-height:.95">Ce que le flag <span style="background:#fcc409;padding:0 10px">lui apporte</span></h2>
+        <p style="margin:0 0 32px;max-width:600px;font-size:19px;line-height:1.6;color:#2c2c5e">Un sport complet, où l’on se dépense autant avec les jambes qu’avec la tête, dans une ambiance d’équipe.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+          <div class="ben">
+            <div style="width:48px;height:48px;background:#060640;display:flex;align-items:center;justify-content:center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18c3-9 8-9 16-9"/><path d="M16 5l4 4-4 4"/></svg>
+            </div>
+            <h3 class="disp" style="margin:0;font-size:28px;line-height:1">Agilité et motricité</h3>
+            <p style="margin:0;font-size:17px;line-height:1.5;color:#2c2c5e">Courir, esquiver, changer de direction : la coordination se travaille en jouant.</p>
+          </div>
+          <div class="ben">
+            <div style="width:48px;height:48px;background:#060640;display:flex;align-items:center;justify-content:center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+            </div>
+            <h3 class="disp" style="margin:0;font-size:28px;line-height:1">Tactique et physique</h3>
+            <p style="margin:0;font-size:17px;line-height:1.5;color:#2c2c5e">De la vitesse, mais aussi de l’intelligence de jeu : lire le terrain et choisir la bonne action.</p>
+          </div>
+          <div class="ben">
+            <div style="width:48px;height:48px;background:#060640;display:flex;align-items:center;justify-content:center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+            </div>
+            <h3 class="disp" style="margin:0;font-size:28px;line-height:1">Sans contact</h3>
+            <p style="margin:0;font-size:17px;line-height:1.5;color:#2c2c5e">Pas de plaquage : on arrête le porteur du ballon en attrapant le flag de sa ceinture.</p>
+          </div>
+          <div class="ben">
+            <div style="width:48px;height:48px;background:#060640;display:flex;align-items:center;justify-content:center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5"/><path d="M14 15c3 0 8 1 8 5"/></svg>
+            </div>
+            <h3 class="disp" style="margin:0;font-size:28px;line-height:1">Filles et garçons</h3>
+            <p style="margin:0;font-size:17px;line-height:1.5;color:#2c2c5e">Une équipe mixte, où chacun trouve sa place et son rôle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LES JEUX OLYMPIQUES -->
+  <section style="background:#060640;color:#ffffff;padding:96px 32px;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:32px 56px">
+      <div style="flex:1 1 420px;min-width:0">
+        <div class="cond" style="color:#fcc409;font-size:28px;letter-spacing:.24em">Los Angeles</div>
+        <div class="disp" aria-hidden="true" style="font-size:clamp(120px,20vw,300px);line-height:.85;color:transparent;-webkit-text-stroke:3px #fcc409">2028</div>
+      </div>
+      <div style="flex:1 1 460px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#fcc409">Sport olympique</div>
+        <h2 class="disp" style="margin:12px 0 22px;font-size:clamp(44px,5.4vw,72px);line-height:.95">Le flag entre aux <span style="color:#fcc409">Jeux olympiques</span></h2>
+        <p style="margin:0 0 28px;max-width:560px;font-size:20px;line-height:1.6;color:rgba(255,255,255,.88)">Le flag football sera au programme des Jeux olympiques de Los Angeles en 2028. Pour vos enfants, c’est le bon moment de s’y mettre : les Spartiates les accueillent dès 8 ans.</p>
+        <dc-import name="LienAdhesion" variant="yellow" label="Inscrire mon enfant" hint-size="270px,52px"></dc-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- UN ACCUEIL POUR TOUTE LA FAMILLE -->
+  <section style="background:#f3f4f9;padding:104px 32px;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:56px">
+      <div style="flex:1 1 440px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#3b3b6b">Au club</div>
+        <h2 class="disp" style="margin:12px 0 22px;font-size:clamp(44px,5.4vw,72px);line-height:.95">Un accueil chaleureux pour <span style="background:#fcc409;padding:0 10px">toute la famille</span></h2>
+        <p style="margin:0 0 18px;max-width:560px;font-size:19px;line-height:1.65;color:#2c2c5e">Au Stade du Grand Marais, des bénévoles accueillent les familles et les supporters à chaque rencontre. Sur le terrain, des coachs accompagnent les joueurs.</p>
+        <p style="margin:0 0 28px;max-width:560px;font-size:19px;line-height:1.65;color:#2c2c5e">Le flag est ouvert à tous : les enfants en priorité, mais aussi les jeunes et les adultes.</p>
+        <div class="cond" style="display:inline-block;background:#060640;color:#fcc409;font-size:20px;padding:10px 18px">Champion de France Senior en 2009</div>
+      </div>
+      <div style="flex:1 1 460px;min-width:0">
+        <div style="position:relative;height:560px">
+          <img src="../../assets/images/supporters-bord-terrain.jpg" alt="Supporters et bénévoles au bord du terrain, devant la bâche des partenaires du club" style="position:absolute;top:0;left:0;width:78%;height:360px;object-fit:cover;display:block;clip-path:polygon(0 0,100% 0,92% 100%,0 100%)">
+          <div style="position:absolute;right:0;bottom:0;width:54%;height:350px;background:#fcc409;clip-path:polygon(12% 0,100% 0,100% 100%,0 100%)"></div>
+          <img src="../../assets/images/flag-coach-plan-de-jeu.jpg" alt="Un joueur et son coach étudient un plan de jeu sur une planchette aux couleurs des Spartiates" style="position:absolute;right:18px;bottom:18px;width:54%;height:350px;object-fit:cover;object-position:50% 12%;display:block;clip-path:polygon(12% 0,100% 0,100% 100%,0 100%)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSCRIPTION -->
+  <section id="inscription" style="background:#0a0a4d;color:#ffffff;padding:104px 32px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px">
+      <div style="flex:1 1 440px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#fcc409">Inscriptions</div>
+        <h2 class="disp" style="margin:12px 0 32px;font-size:clamp(44px,5.6vw,76px);line-height:.95">Inscrire votre enfant en <span style="color:#fcc409">3 étapes</span></h2>
+        <div style="display:flex;flex-direction:column;max-width:560px;margin-bottom:36px">
+          <div style="display:flex;gap:22px;padding:20px 0;border-top:2px solid #fcc409">
+            <span class="disp" style="flex:0 0 44px;font-size:48px;line-height:1;color:#fcc409">1</span>
+            <div>
+              <div style="font-size:21px;font-weight:700">Contactez le bureau</div>
+              <div style="font-size:17px;line-height:1.5;color:rgba(255,255,255,.84)">Par téléphone ou par e-mail, nous répondons à toutes vos questions.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:22px;padding:20px 0;border-top:1px solid rgba(255,255,255,.3)">
+            <span class="disp" style="flex:0 0 44px;font-size:48px;line-height:1;color:#fcc409">2</span>
+            <div>
+              <div style="font-size:21px;font-weight:700">Venez rencontrer l’équipe</div>
+              <div style="font-size:17px;line-height:1.5;color:rgba(255,255,255,.84)">Au Stade du Grand Marais, pendant un entraînement des jeunes (horaires dans « Infos pratiques »). [Modalités de la séance d’essai à confirmer]</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:22px;padding:20px 0;border-top:1px solid rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.3)">
+            <span class="disp" style="flex:0 0 44px;font-size:48px;line-height:1;color:#fcc409">3</span>
+            <div>
+              <div style="font-size:21px;font-weight:700">Inscrivez votre enfant</div>
+              <div style="font-size:17px;line-height:1.5;color:rgba(255,255,255,.84)">L’adhésion de la saison se fait en ligne sur HelloAsso. Il rejoint ensuite son équipe, sa ceinture de flags à la taille.</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <dc-import name="LienAdhesion" variant="yellow" label="Inscrire mon enfant" hint-size="270px,52px"></dc-import>
+          <a class="btn-o" href="Contact.dc.html">Poser une question</a>
+        </div>
+      </div>
+
+      <div style="flex:1 1 400px;min-width:0">
+        <div style="background:#ffffff;color:#060640;padding:32px">
+          <h3 class="disp" style="margin:0 0 16px;font-size:36px;line-height:1">Infos pratiques</h3>
+          <div style="border-top:2px solid #060640">
+            <sc-for list="{{ infos }}" as="i" hint-placeholder-count="6">
+              <div style="padding:14px 0;border-bottom:1px solid #d9daea">
+                <div class="cond" style="font-size:15px;letter-spacing:.14em;color:#3b3b6b">{{ i.label }}</div>
+                <div style="font-size:18px;font-weight:600;line-height:1.4">{{ i.value }}</div>
+                <sc-if value="{{ i.isTraining }}" hint-placeholder-val="{{ false }}">
+                  <dc-import name="Horaires" variant="trainings-strong" discipline="Flag jeunes" hint-size="100%,26px"></dc-import>
+                </sc-if>
+                <sc-if value="{{ i.isTrainingSeniors }}" hint-placeholder-val="{{ false }}">
+                  <dc-import name="Horaires" variant="trainings-strong" discipline="Flag seniors" hint-size="100%,52px"></dc-import>
+                </sc-if>
+                <sc-if value="{{ i.hasLink }}" hint-placeholder-val="{{ false }}">
+                  <dc-import name="LienAdhesion" variant="link-u" label="Voir les tarifs et adhérer sur HelloAsso →" hint-size="100%,44px"></dc-import>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU PARTENAIRES (commun à toutes les pages) -->
+  <dc-import name="Partenaires" hint-size="100%,640px"></dc-import>
+
+  <!-- PIED DE PAGE -->
+  <footer style="background:#060640;color:#ffffff">
+    <svg width="100%" height="18" aria-hidden="true" style="display:block"><defs><pattern id="mFl" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mFl)"/></svg>
+    <div style="max-width:1320px;margin:0 auto;padding:64px 32px 32px">
+      <div style="display:flex;flex-wrap:wrap;gap:48px 56px">
+        <div style="flex:1 1 280px;min-width:0">
+          <img src="../../assets/logo/logo-spartiates.png" alt="Logo des Spartiates d’Amiens" style="width:120px;height:120px;display:block;margin-bottom:20px">
+          <div class="disp" style="font-size:30px;line-height:1">Force · Passion · <span style="color:#fcc409">Volonté</span></div>
+          <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.8)">Club associatif de football américain, flag et cheerleading, fondé à Amiens en 1987.</p>
+        </div>
+        <div style="flex:1 1 260px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:14px">Le bureau</div>
+          <div style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.9)">Stade du Grand Marais<br>37 Rue du Grand Marais<br>80080 Amiens<br>03 22 52 99 24<br>secretariat@lesspartiates.com</div>
+          <div style="margin-top:14px"><dc-import name="Horaires" variant="bureau-footer" hint-size="100%,52px"></dc-import></div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Le club</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="Football.dc.html">Football américain</a>
+            <a class="tlink" href="Flag.dc.html">Flag</a>
+            <a class="tlink" href="Cheerleading.dc.html">Cheerleading</a>
+            <dc-import name="LienAdhesion" variant="link" label="Nous rejoindre" hint-size="160px,44px"></dc-import>
+          </div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Suivez-nous</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="https://www.instagram.com/spartiatesfoot/">Instagram</a>
+            <a class="tlink" href="https://www.facebook.com/spartiatesfoot/">Facebook</a>
+            <a class="tlink" href="https://www.youtube.com/@LesSpartiatesdAmiens">YouTube</a>
+            <a class="tlink" href="https://www.tiktok.com/@spartiatesamiens">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:rgba(255,255,255,.8)">
+        <span>© Les Spartiates d’Amiens 2026</span>
+        <span style="display:flex;flex-wrap:wrap;gap:4px 24px">
+          <a class="tlink" href="https://lesspartiates.com/mentions-legales" style="min-height:32px;font-size:14px">Mentions légales</a>
+          <a class="tlink" href="https://www.fffa.org/actualites/" style="min-height:32px;font-size:14px">Fédération Française de Football Américain</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const infos = [
+      { label: 'Âge', value: 'À partir de 8 ans' },
+      { label: 'Entraînements des jeunes', value: '', isTraining: true },
+      { label: 'Entraînements des seniors', value: '', isTrainingSeniors: true },
+      { label: 'Lieu', value: 'Stade du Grand Marais, 37 Rue du Grand Marais, 80080 Amiens' },
+      { label: 'Licence et tarifs', value: 'Adhésion de la saison : tarifs consultables sur notre page HelloAsso.', hasLink: true },
+      { label: 'Équipement', value: 'Une tenue de sport et une paire de crampons (recommandé)' },
+      { label: 'Contact', value: '03 22 52 99 24 · secretariat@lesspartiates.com' }
+    ];
+    return { infos };
+  }
+}
+</script>
+</body>
+</html>

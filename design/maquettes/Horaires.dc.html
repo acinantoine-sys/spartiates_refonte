@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Horaires du club – source unique</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="font-family:'Barlow',system-ui,sans-serif;color:#060640;display:flex;flex-wrap:wrap;gap:40px 48px;padding:{{ pad }}">
+
+  <sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1 1 100%;min-width:0">
+      <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.22em;font-size:18px;color:#3b3b6b">Source unique</div>
+      <h1 style="margin:10px 0 14px;font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:56px;line-height:.95">Horaires du club</h1>
+      <p style="margin:0;max-width:760px;font-size:18px;line-height:1.6;color:#2c2c5e">Tous les horaires du site (page Contact, page Flag, pieds de page) sont lus dans ce fichier. Pour les modifier, il suffit de changer la liste « bureau » ou la liste « entraînements » en haut du code de ce fichier : toutes les pages se mettent à jour.</p>
+    </div>
+  </sc-if>
+
+  <!-- Horaires du bureau (tableau) -->
+  <sc-if value="{{ showBureau }}" hint-placeholder-val="{{ true }}">
+    <div style="flex:1 1 360px;min-width:0">
+      <sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}">
+        <h2 style="margin:0 0 12px;font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:30px;line-height:1">Bureau</h2>
+      </sc-if>
+      <div style="border-top:2px solid #060640">
+        <sc-for list="{{ bureauRows }}" as="h" hint-placeholder-count="7">
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid #d9daea;font-size:17px">
+            <span style="font-weight:600">{{ h.day }}</span>
+            <span style="color:#2c2c5e">{{ h.hours }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Horaires du bureau (pied de page, texte clair sur fond navy) -->
+  <sc-if value="{{ showFooter }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1 1 100%;min-width:0;font-size:15px;line-height:1.7;color:rgba(255,255,255,.8)">
+      <sc-for list="{{ footerLines }}" as="l" hint-placeholder-count="2">
+        <div>{{ l.text }}</div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <!-- Ouverture du stade = bureau + entraînements -->
+  <sc-if value="{{ showStade }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1 1 360px;min-width:0">
+      <sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}">
+        <h2 style="margin:0 0 12px;font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:30px;line-height:1">Ouverture du stade</h2>
+      </sc-if>
+      <sc-for list="{{ stadiumHours }}" as="s" hint-placeholder-count="7">
+        <div style="display:flex;justify-content:space-between;gap:12px;padding:5px 0;font-size:16px">
+          <span style="font-weight:600">{{ s.day }}</span>
+          <span style="text-align:right;color:#2c2c5e">{{ s.hours }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <!-- Entraînements (toutes disciplines) -->
+  <sc-if value="{{ showTrainings }}" hint-placeholder-val="{{ true }}">
+    <div style="flex:1 1 360px;min-width:0">
+      <sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}">
+        <h2 style="margin:0 0 12px;font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:30px;line-height:1">Entraînements</h2>
+      </sc-if>
+      <sc-for list="{{ trainingLines }}" as="t" hint-placeholder-count="1">
+        <div style="font-size:17px;color:#2c2c5e">{{ t.text }}</div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <!-- Entraînements d'une famille de disciplines (texte clair sur fond navy, page Football) -->
+  <sc-if value="{{ showTrainingsGroup }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1 1 100%;min-width:0">
+      <sc-for list="{{ trainingLinesGroup }}" as="t" hint-placeholder-count="3">
+        <div style="font-size:19px;line-height:1.5;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.28);color:#ffffff">{{ t.text }}</div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <!-- Entraînements d'une discipline (texte en gras, page Flag) -->
+  <sc-if value="{{ showTrainingsStrong }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1 1 100%;min-width:0">
+      <sc-for list="{{ trainingLinesFiltered }}" as="t" hint-placeholder-count="1">
+        <div style="font-size:18px;font-weight:600;line-height:1.4">{{ t.text }}</div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"variant":{"editor":null,"default":"all","tsType":"string"},"discipline":{"editor":null,"default":"","tsType":"string"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const variant = this.props.variant || 'all';
+    const discipline = this.props.discipline || '';
+
+    // =====================================================================
+    // SOURCE UNIQUE DES HORAIRES : modifier ICI, tout le site se met à jour
+    // =====================================================================
+    const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+
+    // 1) Horaires d’ouverture du bureau (un jour absent = fermé)
+    const bureau = {
+      Lundi: [['9h', '17h']],
+      Mardi: [['9h', '13h']],
+      Jeudi: [['9h', '17h']],
+      Vendredi: [['9h', '17h']]
+    };
+
+    // 2) Horaires d’entraînement. Sans « place » : l’entraînement a lieu au stade et compte dans son ouverture.
+    //    Avec « place » : autre lieu, affiché dans la liste mais jamais compté dans l’ouverture du stade.
+    const trainings = [
+      { day: 'Mercredi', from: '14h', to: '16h', label: 'Flag jeunes' },
+      { day: 'Samedi', from: '14h', to: '16h', label: 'Flag jeunes' },
+      { day: 'Lundi', from: '19h', to: '21h', label: 'Flag seniors' },
+      { day: 'Mercredi', from: '20h', to: '22h', label: 'Flag seniors' },
+      { day: 'Mardi', from: '19h30', to: '21h30', label: 'Football seniors' },
+      { day: 'Jeudi', from: '19h30', to: '21h30', label: 'Football seniors' },
+      { day: 'Mercredi', from: '18h30', to: '20h', label: 'Football U19' },
+      { day: 'Vendredi', from: '18h30', to: '20h', label: 'Football U19' },
+      { day: 'Mercredi', from: '16h30', to: '18h30', label: 'Football U15' },
+      { day: 'Mardi', from: '18h30', to: '20h30', label: 'Cheerleading minimes, cadets et juniors' },
+      { day: 'Mercredi', from: '18h30', to: '21h30', label: 'Cheerleading seniors', place: 'Complexe sportif Dupontreue' },
+      { day: 'Vendredi', from: '19h', to: '21h30', label: 'Cheerleading', place: 'Petit gymnase d’Étouvie' },
+      { day: 'Samedi', from: '10h', to: '12h', label: 'Cheerleading minimes et cadets', place: 'Halle des sports d’Étouvie' }
+    ];
+    // =====================================================================
+
+    const toMin = (s) => { const p = s.split('h'); return parseInt(p[0], 10) * 60 + (parseInt(p[1], 10) || 0); };
+    const fmt = (m) => { const h = Math.floor(m / 60); const mm = m % 60; return h + 'h' + (mm ? String(mm).padStart(2, '0') : ''); };
+    const win = (w, sep) => fmt(toMin(w[0])) + sep + fmt(toMin(w[1]));
+
+    // Tableau du bureau
+    const bureauRows = days.map((d) => ({
+      day: d,
+      hours: (bureau[d] || []).length ? bureau[d].map((w) => win(w, ' – ')).join(' et ') : 'Fermé'
+    }));
+
+    // Pied de page : les jours qui partagent les mêmes horaires sont regroupés
+    const order = [];
+    const byHours = {};
+    days.forEach((d) => {
+      const w = bureau[d] || [];
+      if (!w.length) return;
+      const k = w.map((x) => win(x, '–')).join(' et ');
+      if (!byHours[k]) { byHours[k] = []; order.push(k); }
+      byHours[k].push(d);
+    });
+    const footerLines = order.map((k) => ({
+      text: byHours[k].map((d, i) => (i ? d.toLowerCase() : d)).join(', ') + ' ' + k
+    }));
+
+    // Ouverture du stade = bureau + entraînements, fusionnés jour par jour
+    const stadiumHours = days.map((d) => {
+      const segs = [];
+      (bureau[d] || []).forEach((w) => segs.push({ a: toMin(w[0]), b: toMin(w[1]), tag: 'Bureau' }));
+      trainings.filter((t) => t.day === d && !t.place).forEach((t) => segs.push({ a: toMin(t.from), b: toMin(t.to), tag: 'Entraînement ' + t.label.toLowerCase() }));
+      if (!segs.length) return { day: d, hours: 'Fermé', detail: '' };
+      segs.sort((x, y) => x.a - y.a);
+      const merged = [];
+      segs.forEach((s) => {
+        const last = merged[merged.length - 1];
+        if (last && s.a <= last.b) {
+          last.b = Math.max(last.b, s.b);
+          if (last.tags.indexOf(s.tag) < 0) last.tags.push(s.tag);
+        } else {
+          merged.push({ a: s.a, b: s.b, tags: [s.tag] });
+        }
+      });
+      return {
+        day: d,
+        hours: merged.map((m) => fmt(m.a) + ' – ' + fmt(m.b)).join(' et '),
+        detail: merged.map((m) => m.tags.join(' + ')).join(' · ')
+      };
+    });
+
+    // Lignes « Entraînements » : les jours qui partagent le même horaire sont regroupés
+    const lines = (filter, prefix) => {
+      const groups = {};
+      const keys = [];
+      trainings.filter((t) => !filter || (prefix ? t.label.indexOf(filter) === 0 : t.label === filter)).forEach((t) => {
+        const k = t.label + '|' + t.from + '|' + t.to + '|' + (t.place || '');
+        if (!groups[k]) { groups[k] = { t: t, days: [] }; keys.push(k); }
+        groups[k].days.push(t.day.toLowerCase());
+      });
+      return keys.map((k) => {
+        const g = groups[k];
+        const slot = 'de ' + g.t.from + ' à ' + g.t.to;
+        const where = g.t.place ? ' (' + g.t.place + ')' : '';
+        return { text: (filter && !prefix) ? 'Le ' + g.days.join(' et le ') + ', ' + slot + where : g.t.label + ' : ' + g.days.join(' et ') + ', ' + slot + where };
+      });
+    };
+
+    return {
+      isAll: variant === 'all',
+      showBureau: variant === 'bureau-table' || variant === 'all',
+      showFooter: variant === 'bureau-footer',
+      showStade: variant === 'stade' || variant === 'all',
+      showTrainings: variant === 'trainings' || variant === 'all',
+      showTrainingsStrong: variant === 'trainings-strong',
+      showTrainingsGroup: variant === 'trainings-group',
+      pad: variant === 'all' ? '64px 32px' : '0',
+      bureauRows,
+      footerLines,
+      stadiumHours,
+      trainingLines: lines(''),
+      trainingLinesFiltered: lines(discipline),
+      trainingLinesGroup: lines(discipline, true)
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+{
+  "football_seniors": [
+    {
+      "titre": "Champion de France D1",
+      "annees": [
+        2004,
+        2010,
+        2012
+      ]
+    },
+    {
+      "titre": "Champion de France D2",
+      "annees": [
+        1997,
+        2018,
+        2026
+      ]
+    }
+  ],
+  "jeunes_flag_cheer_resume_page_club": [
+    {
+      "discipline": "Football · Jeunes",
+      "resultats": [
+        {
+          "year": "2025",
+          "label": "Champion territorial Île-de-France U17"
+        },
+        {
+          "year": "2011",
+          "label": "Champion de France Football U19"
+        },
+        {
+          "year": "2010",
+          "label": "Champion de France Football U19"
+        },
+        {
+          "year": "1999",
+          "label": "Champion de France Football U19"
+        }
+      ]
+    },
+    {
+      "discipline": "Flag",
+      "resultats": [
+        {
+          "year": "2009",
+          "label": "Champion de France Senior"
+        }
+      ]
+    },
+    {
+      "discipline": "Cheerleading",
+      "resultats": [
+        {
+          "year": "2026",
+          "label": "SALC, Juniors : 2e place et qualification aux championnats d’Europe"
+        },
+        {
+          "year": "2026",
+          "label": "Qualifications au championnat de France, Juniors : 3e place"
+        },
+        {
+          "year": "2025",
+          "label": "Qualifications aux championnats de France, Juniors : 4e place"
+        },
+        {
+          "year": "2024",
+          "label": "Open Cheer Center, Juniors : 2e place"
+        }
+      ]
+    }
+  ],
+  "cheerleading_par_saison": [
+    {
+      "season": "2025-2026",
+      "items": [
+        {
+          "comp": "SALC",
+          "cat": "Juniors",
+          "rank": "2e",
+          "podium": true,
+          "note": "Qualification aux championnats d’Europe"
+        },
+        {
+          "comp": "SALC",
+          "cat": "Minimes",
+          "rank": "10e"
+        },
+        {
+          "comp": "Qualifications au championnat de France",
+          "cat": "Juniors",
+          "rank": "3e",
+          "podium": true
+        },
+        {
+          "comp": "Qualifications au championnat de France",
+          "cat": "Minimes",
+          "rank": "5e"
+        }
+      ]
+    },
+    {
+      "season": "2024-2025",
+      "items": [
+        {
+          "comp": "Qualifications aux championnats de France",
+          "cat": "Juniors",
+          "rank": "4e"
+        },
+        {
+          "comp": "Open Cheer Center",
+          "cat": "Cadets",
+          "rank": "5e"
+        },
+        {
+          "comp": "Open Cheer Center",
+          "cat": "Juniors",
+          "rank": "5e"
+        }
+      ]
+    },
+    {
+      "season": "2023-2024",
+      "items": [
+        {
+          "comp": "Open Cheer Center",
+          "cat": "Juniors",
+          "rank": "2e",
+          "podium": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Lien d’adhésion HelloAsso – source unique</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.lk-y{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:#fcc409;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid #fcc409}
+.lk-y:hover{background:#ffd84d;border-color:#ffd84d}
+.lk-n{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:#060640;color:#fcc409;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid #060640}
+.lk-n:hover{background:#0e0e6a;border-color:#0e0e6a}
+.lk-l{display:inline-flex;align-items:center;min-height:44px;color:inherit;font-family:'Barlow',system-ui,sans-serif;font-weight:700;font-size:16px;text-decoration:none}
+.lk-l:hover{text-decoration:underline}
+.lk-u{display:inline-flex;align-items:center;min-height:44px;color:inherit;font-family:'Barlow',system-ui,sans-serif;font-weight:700;font-size:16px;text-decoration:underline}
+</style>
+</helmet>
+<div style="font-family:'Barlow',system-ui,sans-serif;color:#060640;display:flex;flex-wrap:wrap;gap:20px 24px;align-items:center;padding:{{ pad }}">
+
+  <sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1 1 100%;min-width:0">
+      <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.22em;font-size:18px;color:#3b3b6b">Source unique</div>
+      <h1 style="margin:10px 0 14px;font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:56px;line-height:.95">Lien d’adhésion HelloAsso</h1>
+      <p style="margin:0 0 20px;max-width:760px;font-size:18px;line-height:1.6;color:#2c2c5e">Ce lien change à chaque saison. Il est défini une seule fois, tout en haut du code de ce fichier. Chaque bouton « Nous rejoindre », « Inscrire mon enfant » ou « Devenir bénévole » du site lit cette valeur : en la modifiant ici, tout le site suit.</p>
+      <div style="font-size:16px;font-weight:600;word-break:break-all;background:#f3f4f9;padding:14px 18px;max-width:900px">{{ url }}</div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isYellow }}" hint-placeholder-val="{{ true }}">
+    <a class="lk-y" href="{{ url }}">{{ label }}</a>
+  </sc-if>
+
+  <sc-if value="{{ isNavy }}" hint-placeholder-val="{{ false }}">
+    <a class="lk-n" href="{{ url }}">{{ labelNavy }}</a>
+  </sc-if>
+
+  <sc-if value="{{ isLink }}" hint-placeholder-val="{{ false }}">
+    <a class="lk-l" href="{{ url }}">{{ labelLink }}</a>
+  </sc-if>
+
+  <sc-if value="{{ isLinkU }}" hint-placeholder-val="{{ false }}">
+    <a class="lk-u" href="{{ url }}">{{ labelLinkU }}</a>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"variant":{"editor":null,"default":"all","tsType":"string"},"label":{"editor":null,"default":"Nous rejoindre","tsType":"string"},"$preview":{"width":1440,"height":600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    // =====================================================================
+    // LIEN D’ADHÉSION DE LA SAISON : à modifier ICI une fois par saison.
+    // Tous les boutons d’adhésion du site (Nous rejoindre, Inscrire mon
+    // enfant, Devenir bénévole…) pointent vers cette adresse.
+    // =====================================================================
+    const ADHESION_URL = 'https://www.helloasso.com/associations/les-spartiates-d-amiens-picardie/adhesions/adhesion-2026-2027';
+    // =====================================================================
+
+    const variant = this.props.variant || 'all';
+    const label = this.props.label || 'Nous rejoindre';
+    const all = variant === 'all';
+    return {
+      url: ADHESION_URL,
+      pad: all ? '64px 32px' : '0',
+      isAll: all,
+      isYellow: variant === 'yellow' || all,
+      isNavy: variant === 'navy' || all,
+      isLink: variant === 'link' || all,
+      isLinkU: variant === 'link-u',
+      label: all ? 'Nous rejoindre' : label,
+      labelNavy: all ? 'Devenir bénévole' : label,
+      labelLink: all ? 'Nous rejoindre (lien de pied de page)' : label,
+      labelLinkU: label
+    };
+  }
+}
+</script>
+</body>
+</html>

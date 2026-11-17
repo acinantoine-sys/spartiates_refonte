@@ -1,0 +1,44 @@
+{
+  "partenaires": [
+    {
+      "name": "Amiens Métropole",
+      "type": "public",
+      "logo": "assets/logos-partenaires/amiens-metropole.png"
+    },
+    {
+      "name": "Région Hauts-de-France",
+      "type": "public",
+      "logo": "assets/logos-partenaires/region-hauts-de-france.png"
+    },
+    {
+      "name": "[Partenaire privé 1]",
+      "type": "prive",
+      "logo": ""
+    },
+    {
+      "name": "[Partenaire privé 2]",
+      "type": "prive",
+      "logo": ""
+    },
+    {
+      "name": "[Partenaire privé 3]",
+      "type": "prive",
+      "logo": ""
+    },
+    {
+      "name": "[Partenaire privé 4]",
+      "type": "prive",
+      "logo": ""
+    },
+    {
+      "name": "[Partenaire privé 5]",
+      "type": "prive",
+      "logo": ""
+    },
+    {
+      "name": "[Partenaire privé 6]",
+      "type": "prive",
+      "logo": ""
+    }
+  ]
+}

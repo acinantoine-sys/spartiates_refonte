@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Accueil – Les Spartiates d’Amiens</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+.pg{font-family:'Barlow',system-ui,sans-serif;color:#060640;background:#ffffff}
+.disp{font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.cond{font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.btn-y{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:#fcc409;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #fcc409}
+.btn-y:hover{background:#ffd84d;border-color:#ffd84d}
+.btn-o{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #ffffff}
+.btn-o:hover{background:#ffffff;color:#060640}
+.btn-n{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #060640}
+.btn-n:hover{background:#060640;color:#ffffff}
+.navlink{display:inline-flex;align-items:center;min-height:44px;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase}
+.navlink:hover{color:#fcc409}
+.tlink{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:16px}
+.tlink:hover{text-decoration:underline}
+.mcard:hover{transform:translateY(-3px)}
+.mcard{transition:transform .15s ease}
+</style>
+</helmet>
+<div class="pg" id="top">
+
+  <!-- EN-TÊTE -->
+  <header style="background:#060640;border-bottom:3px solid #fcc409">
+    <div style="max-width:1320px;margin:0 auto;padding:14px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+      <a href="#top" aria-label="Les Spartiates d’Amiens, accueil" style="display:flex;align-items:center;gap:14px">
+        <img src="../../assets/logo/logo-spartiates.png" alt="" style="width:64px;height:64px;display:block">
+        <span class="disp" style="color:#ffffff;font-size:28px;line-height:.95;display:block">Les Spartiates<span style="display:block;color:#fcc409;font-size:22px;letter-spacing:.08em">d’Amiens</span></span>
+      </a>
+      <nav aria-label="Navigation principale" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 28px">
+        <a class="navlink" href="Football.dc.html">Football américain</a>
+        <a class="navlink" href="Flag.dc.html">Flag</a>
+        <a class="navlink" href="Cheerleading.dc.html">Cheerleading</a>
+        <a class="navlink" href="PageCalendrier.dc.html">Calendrier</a>
+        <a class="navlink" href="Club.dc.html">Le club</a>
+        <a class="navlink" href="Contact.dc.html">Contact</a>
+      </nav>
+      <dc-import name="LienAdhesion" variant="yellow" label="Nous rejoindre" hint-size="230px,52px"></dc-import>
+    </div>
+  </header>
+
+  <!-- HÉROS -->
+  <section style="background:#060640;color:#ffffff;padding:64px 32px 0">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:48px">
+      <div style="flex:1 1 520px;min-width:0">
+        <div class="cond" style="color:#fcc409;font-size:18px;letter-spacing:.22em">Football américain · Flag · Cheerleading</div>
+        <h1 class="disp" style="margin:16px 0 28px;font-size:clamp(64px,10.5vw,152px);line-height:.88;color:#ffffff">
+          <span style="display:block">Force.</span>
+          <span style="display:block">Passion.</span>
+          <span style="display:block;color:#fcc409">Volonté.</span>
+        </h1>
+        <p style="margin:0 0 36px;max-width:560px;font-size:20px;line-height:1.55;color:rgba(255,255,255,.84)">Depuis 1987, les Spartiates d’Amiens portent haut le sport américain en France : 10 titres nationaux et la formation des jeunes au cœur du projet du club.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <dc-import name="LienAdhesion" variant="yellow" label="Nous rejoindre" hint-size="230px,52px"></dc-import>
+          <a class="btn-o" href="#rencontres">Prochaines rencontres</a>
+        </div>
+      </div>
+      <div style="flex:1 1 420px;min-width:0">
+        <div style="position:relative;min-height:540px;background:#0e0e6a;border:2px solid #fcc409;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px">
+          <img src="../../assets/images/accueil-hero-mascotte.jpg" alt="La mascotte des Spartiates, casque et cape dorée, entre sur le terrain devant les joueurs et les supporters, au milieu des fumigènes bleus et jaunes" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block">
+          <img src="../../assets/logo/logo-spartiates.png" alt="Logo des Spartiates d’Amiens" style="position:absolute;left:-20px;bottom:-20px;width:200px;height:200px;display:block">
+        </div>
+      </div>
+    </div>
+    <svg width="100%" height="18" aria-hidden="true" style="display:block;margin-top:72px"><defs><pattern id="mA" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mA)"/></svg>
+  </section>
+
+  <!-- PROCHAINES RENCONTRES -->
+  <section id="rencontres" style="background:#0a0a4d;color:#ffffff;padding:72px 32px 88px">
+    <div style="max-width:1320px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px;margin-bottom:36px">
+        <div>
+          <h2 class="disp" style="margin:0;font-size:clamp(44px,6vw,76px);line-height:.95;color:#ffffff">Prochaines <span style="color:#fcc409">rencontres</span></h2>
+        </div>
+        <a class="tlink" href="PageCalendrier.dc.html" style="color:#fcc409">Calendrier complet →</a>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:stretch">
+        <div style="flex:1 1 340px;min-width:0"><dc-import name="Calendrier" variant="card" disc="foot" hint-size="100%,560px"></dc-import></div>
+        <div style="flex:1 1 340px;min-width:0"><dc-import name="Calendrier" variant="card" disc="flag" hint-size="100%,560px"></dc-import></div>
+        <div style="flex:1 1 340px;min-width:0"><dc-import name="Calendrier" variant="card" disc="cheer" hint-size="100%,560px"></dc-import></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADHÉSION -->
+  <section id="adhesion" style="background:#f3f4f9;padding:104px 32px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px">
+      <div style="flex:1 1 460px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#3b3b6b">Adhésions</div>
+        <h2 class="disp" style="margin:12px 0 24px;font-size:clamp(48px,6.5vw,88px);line-height:.92">Rejoignez la famille <span style="background:#fcc409;padding:0 10px">Spartiates</span></h2>
+        <p style="margin:0 0 36px;max-width:520px;font-size:20px;line-height:1.55;color:#2c2c5e">Que vous veniez pour le contact, la vitesse ou le spectacle, il y a une place pour vous dans l’un de nos trois sports. Un club associatif, une équipe, une ambition nationale.</p>
+
+        <div style="display:flex;flex-direction:column;gap:0;margin-bottom:40px;max-width:520px">
+          <div style="display:flex;align-items:center;gap:20px;padding:18px 0;border-top:2px solid #060640">
+            <span class="disp" style="font-size:44px;line-height:1;width:44px">1</span>
+            <span style="font-size:19px;font-weight:600">Choisissez votre discipline</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:20px;padding:18px 0;border-top:1px solid #b9bad3">
+            <span class="disp" style="font-size:44px;line-height:1;width:44px">2</span>
+            <span style="font-size:19px;font-weight:600">Venez nous rencontrer à l’entraînement <span style="font-weight:500;color:#3b3b6b">[modalités à confirmer]</span></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:20px;padding:18px 0;border-top:1px solid #b9bad3;border-bottom:2px solid #060640">
+            <span class="disp" style="font-size:44px;line-height:1;width:44px">3</span>
+            <span style="font-size:19px;font-weight:600">Inscrivez-vous et portez les couleurs</span>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+          <dc-import name="LienAdhesion" variant="navy" label="Nous rejoindre" hint-size="230px,52px"></dc-import>
+          <a class="btn-n" href="Contact.dc.html">Contacter le bureau</a>
+        </div>
+      </div>
+
+      <div style="flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:20px">
+        <sc-for list="{{ sports }}" as="s" hint-placeholder-count="3">
+          <a href="{{ s.href }}" class="mcard" style="display:flex;gap:24px;align-items:center;background:#ffffff;padding:28px">
+            <div style="flex:0 0 84px;height:84px;background:#060640;display:flex;align-items:center;justify-content:center">
+              <sc-if value="{{ s.isFoot }}" hint-placeholder-val="{{ true }}">
+                <svg width="44" height="44" viewBox="0 0 32 32" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="16" cy="16" rx="13" ry="8" transform="rotate(-35 16 16)"/><path d="M12.5 19.5l7-7M14.5 14.5l2 2M17 12l2 2M12 17l2 2"/></svg>
+              </sc-if>
+              <sc-if value="{{ s.isFlag }}" hint-placeholder-val="{{ false }}">
+                <svg width="44" height="44" viewBox="0 0 32 32" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v24M8 6h16l-4 5 4 5H8"/></svg>
+              </sc-if>
+              <sc-if value="{{ s.isCheer }}" hint-placeholder-val="{{ false }}">
+                <svg width="44" height="44" viewBox="0 0 32 32" fill="none" stroke="#fcc409" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h6l12-6v20l-12-6H4z"/><path d="M10 20l2 7h3l-1.5-7"/><path d="M25 12a6 6 0 010 8"/></svg>
+              </sc-if>
+            </div>
+            <div style="min-width:0">
+              <h3 class="disp" style="margin:0 0 6px;font-size:36px;line-height:1">{{ s.name }}</h3>
+              <p style="margin:0 0 6px;font-size:17px;line-height:1.5;color:#2c2c5e">{{ s.text }}</p>
+              <span style="font-weight:700;font-size:16px">{{ s.cta }} →</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE CLUB EN CHIFFRES -->
+  <section id="club" style="background:#060640;color:#ffffff">
+    <svg width="100%" height="18" aria-hidden="true" style="display:block"><defs><pattern id="mB" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mB)"/></svg>
+    <div style="max-width:1320px;margin:0 auto;padding:72px 32px 80px">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px;margin-bottom:40px">
+        <h2 class="disp" style="margin:0;font-size:clamp(40px,5vw,64px);line-height:.95">Un club <span style="color:#fcc409">historique</span></h2>
+        <a class="tlink" href="Club.dc.html" style="color:#fcc409">Découvrir l’histoire du club →</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:32px 24px">
+        <div style="flex:1 1 220px;border-top:3px solid #fcc409;padding-top:16px">
+          <div class="disp" style="font-size:clamp(64px,8vw,112px);line-height:.95;color:#fcc409">1987</div>
+          <div style="font-size:18px;color:rgba(255,255,255,.84)">Année de fondation à Amiens</div>
+        </div>
+        <div style="flex:1 1 220px;border-top:3px solid #fcc409;padding-top:16px">
+          <div class="disp" style="font-size:clamp(64px,8vw,112px);line-height:.95;color:#fcc409">10</div>
+          <div style="font-size:18px;color:rgba(255,255,255,.84)">Titres nationaux</div>
+        </div>
+        <div style="flex:1 1 220px;border-top:3px solid #fcc409;padding-top:16px">
+          <div class="disp" style="font-size:clamp(64px,8vw,112px);line-height:.95;color:#fcc409">6</div>
+          <div style="font-size:18px;color:rgba(255,255,255,.84)">Finales nationales disputées</div>
+        </div>
+        <div style="flex:1 1 220px;border-top:3px solid #fcc409;padding-top:16px">
+          <div class="disp" style="font-size:clamp(64px,8vw,112px);line-height:.95;color:#fcc409">3</div>
+          <div style="font-size:18px;color:rgba(255,255,255,.84)">Disciplines : football américain, flag, cheerleading</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section style="background:#ffffff;padding:96px 32px">
+    <div style="max-width:1320px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 32px;margin-bottom:36px">
+        <div>
+          <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#3b3b6b">Instagram · @spartiatesfoot</div>
+          <h2 class="disp" style="margin:10px 0 0;font-size:clamp(40px,5vw,64px);line-height:.95">Le club <span style="background:#fcc409;padding:0 10px">en direct</span></h2>
+        </div>
+        <a class="btn-n" href="https://www.instagram.com/spartiatesfoot/">Suivre @spartiatesfoot</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px">
+        <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
+          <a class="mcard" href="https://www.instagram.com/spartiatesfoot/" aria-label="Voir la publication sur Instagram" style="position:relative;aspect-ratio:1/1;background:#e6e7f2;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px">
+            <span class="cond" style="font-size:16px;color:#3b3b6b">{{ p.label }}</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#060640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;top:12px;right:12px"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU PARTENAIRES (commun à toutes les pages) -->
+  <dc-import name="Partenaires" hint-size="100%,640px"></dc-import>
+
+  <!-- PIED DE PAGE -->
+  <footer id="contact" style="background:#060640;color:#ffffff">
+    <svg width="100%" height="18" aria-hidden="true" style="display:block"><defs><pattern id="mC" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mC)"/></svg>
+    <div style="max-width:1320px;margin:0 auto;padding:64px 32px 32px">
+      <div style="display:flex;flex-wrap:wrap;gap:48px 56px">
+        <div style="flex:1 1 280px;min-width:0">
+          <img src="../../assets/logo/logo-spartiates.png" alt="Logo des Spartiates d’Amiens" style="width:120px;height:120px;display:block;margin-bottom:20px">
+          <div class="disp" style="font-size:30px;line-height:1">Force · Passion · <span style="color:#fcc409">Volonté</span></div>
+          <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.8)">Club associatif de football américain, flag et cheerleading, fondé à Amiens en 1987.</p>
+        </div>
+        <div style="flex:1 1 260px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:14px">Le bureau</div>
+          <div style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.9)">Stade du Grand Marais<br>37 Rue du Grand Marais<br>80080 Amiens<br>03 22 52 99 24<br>secretariat@lesspartiates.com</div>
+          <div style="margin-top:14px"><dc-import name="Horaires" variant="bureau-footer" hint-size="100%,52px"></dc-import></div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Le club</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="Football.dc.html">Football américain</a>
+            <a class="tlink" href="Flag.dc.html">Flag</a>
+            <a class="tlink" href="Cheerleading.dc.html">Cheerleading</a>
+            <dc-import name="LienAdhesion" variant="link" label="Nous rejoindre" hint-size="160px,44px"></dc-import>
+          </div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Suivez-nous</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="https://www.instagram.com/spartiatesfoot/">Instagram</a>
+            <a class="tlink" href="https://www.facebook.com/spartiatesfoot/">Facebook</a>
+            <a class="tlink" href="https://www.youtube.com/@LesSpartiatesdAmiens">YouTube</a>
+            <a class="tlink" href="https://www.tiktok.com/@spartiatesamiens">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:rgba(255,255,255,.8)">
+        <span>© Les Spartiates d’Amiens 2026</span>
+        <span style="display:flex;flex-wrap:wrap;gap:4px 24px">
+          <a class="tlink" href="https://lesspartiates.com/mentions-legales" style="min-height:32px;font-size:14px">Mentions légales</a>
+          <a class="tlink" href="https://www.fffa.org/actualites/" style="min-height:32px;font-size:14px">Fédération Française de Football Américain</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4500}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const sports = [
+      { isFoot: true, isFlag: false, isCheer: false, name: 'Football américain', text: 'Stratégie, puissance et esprit d’équipe, du jeune joueur au senior.', cta: 'Découvrir le football américain', href: 'Football.dc.html' },
+      { isFoot: false, isFlag: true, isCheer: false, name: 'Flag', text: 'La version sans plaquage : rapide, accessible et ludique.', cta: 'Découvrir le flag', href: 'Flag.dc.html' },
+      { isFoot: false, isFlag: false, isCheer: true, name: 'Cheerleading', text: 'Danse, acrobaties et énergie au service du spectacle.', cta: 'Découvrir le cheerleading', href: 'Cheerleading.dc.html' }
+    ];
+    const posts = [];
+    for (let i = 1; i <= 6; i++) posts.push({ label: '[Publication Instagram ' + i + ']' });
+    return { sports, posts };
+  }
+}
+</script>
+</body>
+</html>

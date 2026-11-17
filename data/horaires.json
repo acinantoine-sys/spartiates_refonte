@@ -1,0 +1,111 @@
+{
+  "bureau": {
+    "Lundi": [
+      [
+        "9h",
+        "17h"
+      ]
+    ],
+    "Mardi": [
+      [
+        "9h",
+        "13h"
+      ]
+    ],
+    "Jeudi": [
+      [
+        "9h",
+        "17h"
+      ]
+    ],
+    "Vendredi": [
+      [
+        "9h",
+        "17h"
+      ]
+    ]
+  },
+  "entrainements": [
+    {
+      "day": "Mercredi",
+      "from": "14h",
+      "to": "16h",
+      "label": "Flag jeunes"
+    },
+    {
+      "day": "Samedi",
+      "from": "14h",
+      "to": "16h",
+      "label": "Flag jeunes"
+    },
+    {
+      "day": "Lundi",
+      "from": "19h",
+      "to": "21h",
+      "label": "Flag seniors"
+    },
+    {
+      "day": "Mercredi",
+      "from": "20h",
+      "to": "22h",
+      "label": "Flag seniors"
+    },
+    {
+      "day": "Mardi",
+      "from": "19h30",
+      "to": "21h30",
+      "label": "Football seniors"
+    },
+    {
+      "day": "Jeudi",
+      "from": "19h30",
+      "to": "21h30",
+      "label": "Football seniors"
+    },
+    {
+      "day": "Mercredi",
+      "from": "18h30",
+      "to": "20h",
+      "label": "Football U19"
+    },
+    {
+      "day": "Vendredi",
+      "from": "18h30",
+      "to": "20h",
+      "label": "Football U19"
+    },
+    {
+      "day": "Mercredi",
+      "from": "16h30",
+      "to": "18h30",
+      "label": "Football U15"
+    },
+    {
+      "day": "Mardi",
+      "from": "18h30",
+      "to": "20h30",
+      "label": "Cheerleading minimes, cadets et juniors"
+    },
+    {
+      "day": "Mercredi",
+      "from": "18h30",
+      "to": "21h30",
+      "label": "Cheerleading seniors",
+      "place": "Complexe sportif Dupontreue"
+    },
+    {
+      "day": "Vendredi",
+      "from": "19h",
+      "to": "21h30",
+      "label": "Cheerleading",
+      "place": "Petit gymnase d’Étouvie"
+    },
+    {
+      "day": "Samedi",
+      "from": "10h",
+      "to": "12h",
+      "label": "Cheerleading minimes et cadets",
+      "place": "Halle des sports d’Étouvie"
+    }
+  ]
+}

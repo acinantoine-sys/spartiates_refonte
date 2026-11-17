@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Football américain – Les Spartiates d’Amiens</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+.pg{font-family:'Barlow',system-ui,sans-serif;color:#060640;background:#ffffff}
+.disp{font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.cond{font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.btn-y{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:#fcc409;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #fcc409}
+.btn-y:hover{background:#ffd84d;border-color:#ffd84d}
+.btn-o{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #ffffff}
+.btn-o:hover{background:#ffffff;color:#060640}
+.btn-n2{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #060640}
+.btn-n2:hover{background:#060640;color:#ffffff}
+.navlink{display:inline-flex;align-items:center;min-height:44px;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase;border-bottom:3px solid transparent}
+.navlink:hover{color:#fcc409}
+.navlink-on{color:#fcc409;border-bottom-color:#fcc409}
+.tlink{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:16px}
+.tlink:hover{text-decoration:underline}
+</style>
+</helmet>
+<div class="pg" id="top">
+
+  <!-- EN-TÊTE -->
+  <header style="background:#060640;border-bottom:3px solid #fcc409">
+    <div style="max-width:1320px;margin:0 auto;padding:14px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+      <a href="Main.dc.html" aria-label="Les Spartiates d’Amiens, accueil" style="display:flex;align-items:center;gap:14px">
+        <img src="../../assets/logo/logo-spartiates.png" alt="" style="width:64px;height:64px;display:block">
+        <span class="disp" style="color:#ffffff;font-size:28px;line-height:.95;display:block">Les Spartiates<span style="display:block;color:#fcc409;font-size:22px;letter-spacing:.08em">d’Amiens</span></span>
+      </a>
+      <nav aria-label="Navigation principale" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 28px">
+        <a class="navlink navlink-on" href="Football.dc.html" aria-current="page">Football américain</a>
+        <a class="navlink" href="Flag.dc.html">Flag</a>
+        <a class="navlink" href="Cheerleading.dc.html">Cheerleading</a>
+        <a class="navlink" href="PageCalendrier.dc.html">Calendrier</a>
+        <a class="navlink" href="Club.dc.html">Le club</a>
+        <a class="navlink" href="Contact.dc.html">Contact</a>
+      </nav>
+      <dc-import name="LienAdhesion" variant="yellow" label="Nous rejoindre" hint-size="230px,52px"></dc-import>
+    </div>
+  </header>
+
+  <!-- TITRE DE PAGE -->
+  <section style="background:#060640;color:#ffffff;padding:56px 32px 0;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:40px 56px">
+      <div style="flex:1 1 520px;min-width:0">
+        <div class="cond" style="font-size:16px;letter-spacing:.18em;color:rgba(255,255,255,.8)"><a href="Main.dc.html" style="text-decoration:underline">Accueil</a> <span style="color:#fcc409">/</span> Football américain</div>
+        <h1 class="disp" style="margin:16px 0 22px;font-size:clamp(56px,8.6vw,124px);line-height:.9">Football <span style="color:#fcc409">américain</span></h1>
+        <p style="margin:0 0 32px;max-width:600px;font-size:20px;line-height:1.55;color:rgba(255,255,255,.86)">Deux équipes seniors, en D1 et en D2, des équipes de jeunes et un club qui forme ses joueurs depuis 1987.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <a class="btn-y" href="#calendrier">Voir le calendrier</a>
+          <a class="btn-o" href="#entrainements">Les entraînements</a>
+        </div>
+      </div>
+      <div style="flex:1 1 420px;min-width:0">
+        <div style="position:relative;height:420px;margin:0 22px 0 22px">
+          <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:#fcc409;clip-path:polygon(16% 0,100% 0,84% 100%,0 100%);transform:translate(-22px,22px)"></div>
+          <img src="../../assets/images/football-hero-joueur.jpg" alt="Un joueur des Spartiates, casque jaune et maillot marine, entre sur le terrain du Stade du Grand Marais" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;clip-path:polygon(16% 0,100% 0,84% 100%,0 100%)">
+        </div>
+      </div>
+    </div>
+    <svg width="100%" height="18" aria-hidden="true" style="display:block;margin-top:72px"><defs><pattern id="mFo" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mFo)"/></svg>
+  </section>
+
+  <!-- CALENDRIER -->
+  <section id="calendrier" style="background:#0a0a4d;color:#ffffff;padding:88px 32px 96px">
+    <div style="max-width:1320px;margin:0 auto">
+      <div style="margin-bottom:36px">
+        <h2 class="disp" style="margin:0;font-size:clamp(44px,6vw,76px);line-height:.95">Calendrier <span style="color:#fcc409">2027</span></h2>
+        <p style="margin:14px 0 0;max-width:760px;font-size:18px;line-height:1.55;color:rgba(255,255,255,.86)">Les rencontres à domicile se jouent au Stade du Grand Marais, 37 Rue du Grand Marais, 80080 Amiens. [Horaires de chaque rencontre à confirmer]</p>
+      </div>
+      <dc-import name="Calendrier" variant="list" disc="foot" hint-size="100%,920px"></dc-import>
+      <div style="margin-top:28px"><a class="btn-y" href="PageCalendrier.dc.html">Voir tout le calendrier du club</a></div>
+    </div>
+  </section>
+
+  <!-- VENEZ SUPPORTER -->
+  <section style="background:#f3f4f9;padding:104px 32px;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:56px">
+      <div style="flex:1 1 440px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#3b3b6b">Au stade</div>
+        <h2 class="disp" style="margin:12px 0 22px;font-size:clamp(44px,5.6vw,76px);line-height:.95">Venez supporter <span style="background:#fcc409;padding:0 10px">les Spartiates</span></h2>
+        <p style="margin:0 0 18px;max-width:560px;font-size:19px;line-height:1.65;color:#2c2c5e">Les jours de match, le Stade du Grand Marais accueille supporters et familles, avec des bénévoles du club pour vous recevoir.</p>
+        <p style="margin:0 0 32px;max-width:560px;font-size:19px;line-height:1.65;color:#2c2c5e">Deux équipes seniors à encourager, en D1 comme en D2.</p>
+        <a class="btn-n2" href="#calendrier">Voir les rencontres à domicile</a>
+      </div>
+      <div style="flex:1 1 460px;min-width:0">
+        <div style="position:relative;height:460px;margin:0 22px 22px 22px">
+          <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:#fcc409;clip-path:polygon(0 0,84% 0,100% 100%,16% 100%);transform:translate(22px,22px)"></div>
+          <img src="../../assets/images/supporters-bord-terrain.jpg" alt="Supporters au bord du terrain, devant la bâche des partenaires du club" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;clip-path:polygon(0 0,84% 0,100% 100%,16% 100%)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DANS L'ACTION -->
+  <section style="background:#060640;color:#ffffff;padding:104px 32px;overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:56px 48px">
+      <div style="flex:1 1 320px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#fcc409">Sur le terrain</div>
+        <h2 class="disp" style="margin:12px 0 22px;font-size:clamp(44px,5.6vw,76px);line-height:.95">Ils vivent <span style="color:#fcc409">le jeu</span></h2>
+        <p style="margin:0;max-width:420px;font-size:19px;line-height:1.65;color:rgba(255,255,255,.88)">Plaquages, touchdowns, célébrations : le football américain se vit à fond, de l’entrée sur le terrain au dernier sifflet.</p>
+      </div>
+      <div style="flex:1 1 300px;min-width:0">
+        <div style="position:relative;height:540px;margin:0 22px 22px 22px">
+          <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:#fcc409;clip-path:polygon(10% 0,100% 0,90% 100%,0 100%);transform:translate(-22px,22px)"></div>
+          <img src="../../assets/images/football-joie-maillot-blanc.jpg" alt="Un joueur des Spartiates en maillot blanc, le bras levé, crie sa joie après une action" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:35% 40%;display:block;clip-path:polygon(10% 0,100% 0,90% 100%,0 100%)">
+        </div>
+      </div>
+      <div style="flex:1 1 300px;min-width:0">
+        <div style="position:relative;height:540px;margin:22px 22px 0 22px">
+          <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:#fcc409;clip-path:polygon(0 0,90% 0,100% 100%,10% 100%);transform:translate(22px,-22px)"></div>
+          <img src="../../assets/images/football-action-nuit.jpg" alt="Un joueur des Spartiates, ballon en main, célèbre une action avec ses coéquipiers lors d’un match de nuit" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:60% 45%;display:block;clip-path:polygon(0 0,90% 0,100% 100%,10% 100%)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PALMARÈS -->
+  <section style="background:#ffffff;padding:104px 32px">
+    <div style="max-width:1320px;margin:0 auto">
+      <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#3b3b6b">Palmarès</div>
+      <h2 class="disp" style="margin:12px 0 40px;font-size:clamp(44px,6vw,76px);line-height:.95">Un palmarès <span style="background:#fcc409;padding:0 10px">qui compte</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="background:#060640;color:#ffffff;padding:28px 30px">
+          <div class="cond" style="font-size:16px;letter-spacing:.18em;color:rgba(255,255,255,.82)">Seniors</div>
+          <div class="disp" style="font-size:30px;line-height:1.05;margin:6px 0 14px">Champion de France D1</div>
+          <div class="disp" style="font-size:52px;line-height:1;color:#fcc409">2004 · 2010 · 2012</div>
+        </div>
+        <div style="background:#060640;color:#ffffff;padding:28px 30px">
+          <div class="cond" style="font-size:16px;letter-spacing:.18em;color:rgba(255,255,255,.82)">Seniors</div>
+          <div class="disp" style="font-size:30px;line-height:1.05;margin:6px 0 14px">Champion de France D2</div>
+          <div class="disp" style="font-size:52px;line-height:1;color:#fcc409">1997 · 2018 · 2026</div>
+        </div>
+        <div style="background:#060640;color:#ffffff;padding:28px 30px">
+          <div class="cond" style="font-size:16px;letter-spacing:.18em;color:rgba(255,255,255,.82)">U19</div>
+          <div class="disp" style="font-size:30px;line-height:1.05;margin:6px 0 14px">Champion de France</div>
+          <div class="disp" style="font-size:52px;line-height:1;color:#fcc409">1999 · 2010 · 2011</div>
+        </div>
+        <div style="background:#060640;color:#ffffff;padding:28px 30px">
+          <div class="cond" style="font-size:16px;letter-spacing:.18em;color:rgba(255,255,255,.82)">U17</div>
+          <div class="disp" style="font-size:30px;line-height:1.05;margin:6px 0 14px">Champion territorial Île-de-France</div>
+          <div class="disp" style="font-size:52px;line-height:1;color:#fcc409">2025</div>
+        </div>
+      </div>
+      <div style="margin-top:28px"><a class="tlink" href="Club.dc.html">Tout le palmarès du club →</a></div>
+    </div>
+  </section>
+
+  <!-- ENTRAÎNEMENTS -->
+  <section id="entrainements" style="background:#060640;color:#ffffff;padding:104px 32px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px 64px">
+      <div style="flex:1 1 440px;min-width:0">
+        <div class="cond" style="font-size:18px;letter-spacing:.22em;color:#fcc409">Rejoindre une équipe</div>
+        <h2 class="disp" style="margin:12px 0 22px;font-size:clamp(44px,5.6vw,76px);line-height:.95">Les <span style="color:#fcc409">entraînements</span></h2>
+        <p style="margin:0 0 32px;max-width:520px;font-size:19px;line-height:1.65;color:rgba(255,255,255,.88)">Les équipes de football américain s’entraînent au Stade du Grand Marais, 37 Rue du Grand Marais, 80080 Amiens. Venez rejoindre l’une d’elles.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px">
+          <dc-import name="LienAdhesion" variant="yellow" label="Nous rejoindre" hint-size="230px,52px"></dc-import>
+          <a class="btn-o" href="Contact.dc.html">Poser une question</a>
+        </div>
+      </div>
+      <div style="flex:1 1 440px;min-width:0">
+        <div class="cond" style="font-size:16px;letter-spacing:.18em;color:rgba(255,255,255,.82);margin-bottom:6px">Horaires par équipe</div>
+        <div style="border-top:2px solid #fcc409">
+          <dc-import name="Horaires" variant="trainings-group" discipline="Football" hint-size="100%,230px"></dc-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU PARTENAIRES (commun à toutes les pages) -->
+  <dc-import name="Partenaires" hint-size="100%,640px"></dc-import>
+
+  <!-- PIED DE PAGE -->
+  <footer style="background:#060640;color:#ffffff">
+    <svg width="100%" height="18" aria-hidden="true" style="display:block"><defs><pattern id="mFoF" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mFoF)"/></svg>
+    <div style="max-width:1320px;margin:0 auto;padding:64px 32px 32px">
+      <div style="display:flex;flex-wrap:wrap;gap:48px 56px">
+        <div style="flex:1 1 280px;min-width:0">
+          <img src="../../assets/logo/logo-spartiates.png" alt="Logo des Spartiates d’Amiens" style="width:120px;height:120px;display:block;margin-bottom:20px">
+          <div class="disp" style="font-size:30px;line-height:1">Force · Passion · <span style="color:#fcc409">Volonté</span></div>
+          <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.8)">Club associatif de football américain, flag et cheerleading, fondé à Amiens en 1987.</p>
+        </div>
+        <div style="flex:1 1 260px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:14px">Le bureau</div>
+          <div style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.9)">Stade du Grand Marais<br>37 Rue du Grand Marais<br>80080 Amiens<br>03 22 52 99 24<br>secretariat@lesspartiates.com</div>
+          <div style="margin-top:14px"><dc-import name="Horaires" variant="bureau-footer" hint-size="100%,52px"></dc-import></div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Le club</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="Football.dc.html">Football américain</a>
+            <a class="tlink" href="Flag.dc.html">Flag</a>
+            <a class="tlink" href="Cheerleading.dc.html">Cheerleading</a>
+            <dc-import name="LienAdhesion" variant="link" label="Nous rejoindre" hint-size="160px,44px"></dc-import>
+          </div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Suivez-nous</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="https://www.instagram.com/spartiatesfoot/">Instagram</a>
+            <a class="tlink" href="https://www.facebook.com/spartiatesfoot/">Facebook</a>
+            <a class="tlink" href="https://www.youtube.com/@LesSpartiatesdAmiens">YouTube</a>
+            <a class="tlink" href="https://www.tiktok.com/@spartiatesamiens">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:rgba(255,255,255,.8)">
+        <span>© Les Spartiates d’Amiens 2026</span>
+        <span style="display:flex;flex-wrap:wrap;gap:4px 24px">
+          <a class="tlink" href="https://lesspartiates.com/mentions-legales" style="min-height:32px;font-size:14px">Mentions légales</a>
+          <a class="tlink" href="https://www.fffa.org/actualites/" style="min-height:32px;font-size:14px">Fédération Française de Football Américain</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

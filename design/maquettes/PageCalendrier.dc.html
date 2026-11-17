@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Calendrier – Les Spartiates d’Amiens</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+.pg{font-family:'Barlow',system-ui,sans-serif;color:#060640;background:#ffffff}
+.disp{font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.cond{font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.btn-y{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:#fcc409;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #fcc409}
+.btn-y:hover{background:#ffd84d;border-color:#ffd84d}
+.btn-o{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #ffffff}
+.btn-o:hover{background:#ffffff;color:#060640}
+.btn-n2{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:transparent;color:#060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;border:2px solid #060640}
+.btn-n2:hover{background:#060640;color:#ffffff}
+.navlink{display:inline-flex;align-items:center;min-height:44px;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:18px;letter-spacing:.08em;text-transform:uppercase;border-bottom:3px solid transparent}
+.navlink:hover{color:#fcc409}
+.navlink-on{color:#fcc409;border-bottom-color:#fcc409}
+.tlink{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:16px}
+.tlink:hover{text-decoration:underline}
+</style>
+</helmet>
+<div class="pg" id="top">
+
+  <!-- EN-TÊTE -->
+  <header style="background:#060640;border-bottom:3px solid #fcc409">
+    <div style="max-width:1320px;margin:0 auto;padding:14px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+      <a href="Main.dc.html" aria-label="Les Spartiates d’Amiens, accueil" style="display:flex;align-items:center;gap:14px">
+        <img src="../../assets/logo/logo-spartiates.png" alt="" style="width:64px;height:64px;display:block">
+        <span class="disp" style="color:#ffffff;font-size:28px;line-height:.95;display:block">Les Spartiates<span style="display:block;color:#fcc409;font-size:22px;letter-spacing:.08em">d’Amiens</span></span>
+      </a>
+      <nav aria-label="Navigation principale" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 28px">
+        <a class="navlink" href="Football.dc.html">Football américain</a>
+        <a class="navlink" href="Flag.dc.html">Flag</a>
+        <a class="navlink" href="Cheerleading.dc.html">Cheerleading</a>
+        <a class="navlink navlink-on" href="PageCalendrier.dc.html" aria-current="page">Calendrier</a>
+        <a class="navlink" href="Club.dc.html">Le club</a>
+        <a class="navlink" href="Contact.dc.html">Contact</a>
+      </nav>
+      <dc-import name="LienAdhesion" variant="yellow" label="Nous rejoindre" hint-size="230px,52px"></dc-import>
+    </div>
+  </header>
+
+  <!-- TITRE DE PAGE -->
+  <section style="background:#060640;color:#ffffff;padding:56px 32px 0">
+    <div style="max-width:1320px;margin:0 auto">
+      <div class="cond" style="font-size:16px;letter-spacing:.18em;color:rgba(255,255,255,.8)"><a href="Main.dc.html" style="text-decoration:underline">Accueil</a> <span style="color:#fcc409">/</span> Calendrier</div>
+      <h1 class="disp" style="margin:16px 0 20px;font-size:clamp(56px,9vw,128px);line-height:.9">Le <span style="color:#fcc409">calendrier</span></h1>
+      <p style="margin:0;max-width:700px;font-size:20px;line-height:1.55;color:rgba(255,255,255,.84)">Matchs, tournois et compétitions : toutes les dates des Spartiates, en football américain, en flag et en cheerleading, dans toutes les catégories.</p>
+    </div>
+    <svg width="100%" height="18" aria-hidden="true" style="display:block;margin-top:56px"><defs><pattern id="mCa" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mCa)"/></svg>
+  </section>
+
+  <!-- FILTRES + DATES (source unique : Calendrier.dc.html) -->
+  <section id="dates" style="background:#f3f4f9;padding:56px 32px 96px">
+    <div style="max-width:1320px;margin:0 auto">
+      <p style="margin:0 0 28px;max-width:760px;font-size:18px;line-height:1.6;color:#2c2c5e">Les rencontres à domicile se jouent au Stade du Grand Marais, 37 Rue du Grand Marais, 80080 Amiens. Choisissez une discipline, une catégorie ou un type d’événement pour affiner la liste.</p>
+      <dc-import name="Calendrier" variant="page" hint-size="100%,1400px"></dc-import>
+    </div>
+  </section>
+
+  <!-- ENTRAÎNEMENTS ET ADHÉSION -->
+  <section style="background:#060640;color:#ffffff;padding:72px 32px">
+    <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px 40px">
+      <div style="flex:1 1 420px;min-width:0">
+        <h2 class="disp" style="margin:0;font-size:clamp(40px,5.5vw,72px);line-height:.95">Envie de <span style="color:#fcc409">les rejoindre ?</span></h2>
+        <p style="margin:14px 0 0;max-width:560px;font-size:18px;line-height:1.55;color:rgba(255,255,255,.84)">Football américain, flag ou cheerleading : venez essayer, puis inscrivez-vous en ligne.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:16px">
+        <dc-import name="LienAdhesion" variant="yellow" label="Nous rejoindre" hint-size="230px,52px"></dc-import>
+        <a class="btn-o" href="Contact.dc.html">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU PARTENAIRES (commun à toutes les pages) -->
+  <dc-import name="Partenaires" hint-size="100%,640px"></dc-import>
+
+  <!-- PIED DE PAGE -->
+  <footer style="background:#060640;color:#ffffff">
+    <svg width="100%" height="18" aria-hidden="true" style="display:block"><defs><pattern id="mCaF" width="24" height="18" patternUnits="userSpaceOnUse"><path d="M0 15H6V3H24V15H12V9H18" fill="none" stroke="#fcc409" stroke-width="2.5"/></pattern></defs><rect width="100%" height="18" fill="url(#mCaF)"/></svg>
+    <div style="max-width:1320px;margin:0 auto;padding:64px 32px 32px">
+      <div style="display:flex;flex-wrap:wrap;gap:48px 56px">
+        <div style="flex:1 1 280px;min-width:0">
+          <img src="../../assets/logo/logo-spartiates.png" alt="Logo des Spartiates d’Amiens" style="width:120px;height:120px;display:block;margin-bottom:20px">
+          <div class="disp" style="font-size:30px;line-height:1">Force · Passion · <span style="color:#fcc409">Volonté</span></div>
+          <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.8)">Club associatif de football américain, flag et cheerleading, fondé à Amiens en 1987.</p>
+        </div>
+        <div style="flex:1 1 260px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:14px">Le bureau</div>
+          <div style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.9)">Stade du Grand Marais<br>37 Rue du Grand Marais<br>80080 Amiens<br>03 22 52 99 24<br>secretariat@lesspartiates.com</div>
+          <div style="margin-top:14px"><dc-import name="Horaires" variant="bureau-footer" hint-size="100%,52px"></dc-import></div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Le club</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="Football.dc.html">Football américain</a>
+            <a class="tlink" href="Flag.dc.html">Flag</a>
+            <a class="tlink" href="Cheerleading.dc.html">Cheerleading</a>
+            <dc-import name="LienAdhesion" variant="link" label="Nous rejoindre" hint-size="160px,44px"></dc-import>
+          </div>
+        </div>
+        <div style="flex:1 1 200px;min-width:0">
+          <div class="cond" style="color:#fcc409;font-size:18px;margin-bottom:6px">Suivez-nous</div>
+          <div style="display:flex;flex-direction:column">
+            <a class="tlink" href="https://www.instagram.com/spartiatesfoot/">Instagram</a>
+            <a class="tlink" href="https://www.facebook.com/spartiatesfoot/">Facebook</a>
+            <a class="tlink" href="https://www.youtube.com/@LesSpartiatesdAmiens">YouTube</a>
+            <a class="tlink" href="https://www.tiktok.com/@spartiatesamiens">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:rgba(255,255,255,.8)">
+        <span>© Les Spartiates d’Amiens 2026</span>
+        <span style="display:flex;flex-wrap:wrap;gap:4px 24px">
+          <a class="tlink" href="https://lesspartiates.com/mentions-legales" style="min-height:32px;font-size:14px">Mentions légales</a>
+          <a class="tlink" href="https://www.fffa.org/actualites/" style="min-height:32px;font-size:14px">Fédération Française de Football Américain</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

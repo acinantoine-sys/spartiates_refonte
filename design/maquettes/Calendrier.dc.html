@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Calendrier du club – source unique</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.cal-link{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:16px;color:#060640;text-decoration:none}
+.cal-link:hover{text-decoration:underline}
+.cal-chip{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:2px solid #060640}
+.cal-chip:hover{border-color:#fcc409;box-shadow:inset 0 -4px 0 #fcc409}
+.cal-chip:focus-visible{outline:3px solid #fcc409;outline-offset:2px}
+</style>
+</helmet>
+<div style="font-family:'Barlow',system-ui,sans-serif;color:#060640;display:flex;flex-wrap:wrap;gap:24px;align-items:stretch;padding:{{ pad }}">
+
+  <sc-if value="{{ isAll }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1 1 100%;min-width:0">
+      <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.22em;font-size:18px;color:#3b3b6b">Source unique</div>
+      <h1 style="margin:10px 0 14px;font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:56px;line-height:.95">Calendrier du club</h1>
+      <p style="margin:0;max-width:820px;font-size:18px;line-height:1.6;color:#2c2c5e">Toutes les dates du site (page Calendrier, cartes « Prochaines rencontres » de l’accueil, pages Football américain, Flag et Cheerleading) sont lues dans ce fichier. Pour ajouter, déplacer ou supprimer une date, modifiez la liste « events » en haut du code : une ligne par rencontre, tournoi ou compétition. Les dates passées sont grisées et disparaissent des cartes de l’accueil.</p>
+    </div>
+  </sc-if>
+
+  <!-- CARTE « PROCHAINES RENCONTRES » D'UNE DISCIPLINE -->
+  <sc-if value="{{ showCard }}" hint-placeholder-val="{{ true }}">
+    <article style="flex:1 1 100%;min-width:0;background:#ffffff;color:#060640;display:flex;flex-direction:column">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px;border-bottom:4px solid #fcc409">
+        <div style="display:flex;align-items:center;gap:12px">
+          <sc-if value="{{ card.isFoot }}" hint-placeholder-val="{{ true }}">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#060640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="16" cy="16" rx="13" ry="8" transform="rotate(-35 16 16)"/><path d="M12.5 19.5l7-7M14.5 14.5l2 2M17 12l2 2M12 17l2 2"/></svg>
+          </sc-if>
+          <sc-if value="{{ card.isFlag }}" hint-placeholder-val="{{ false }}">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#060640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4v24M8 6h16l-4 5 4 5H8"/></svg>
+          </sc-if>
+          <sc-if value="{{ card.isCheer }}" hint-placeholder-val="{{ false }}">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#060640" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h6l12-6v20l-12-6H4z"/><path d="M10 20l2 7h3l-1.5-7"/><path d="M25 12a6 6 0 010 8"/></svg>
+          </sc-if>
+          <h3 style="margin:0;font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:30px;line-height:1">{{ card.name }}</h3>
+        </div>
+      </div>
+
+      <div style="padding:24px">
+        <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;font-size:15px;letter-spacing:.14em;color:#3b3b6b;margin-bottom:14px">{{ card.kind }}</div>
+        <div style="display:flex;gap:20px;align-items:stretch">
+          <div style="flex:0 0 92px;background:#fcc409;color:#060640;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 8px;text-align:center">
+            <span style="font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:44px;line-height:.95">{{ card.day }}</span>
+            <span style="font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:20px;line-height:1.1">{{ card.month }}</span>
+          </div>
+          <div style="min-width:0;display:flex;flex-direction:column;justify-content:center;gap:2px">
+            <sc-if value="{{ card.isMatch }}" hint-placeholder-val="{{ true }}">
+              <div style="font-weight:700;font-size:20px;line-height:1.25">Spartiates</div>
+              <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;font-size:15px;color:#3b3b6b;letter-spacing:.2em">contre</div>
+            </sc-if>
+            <div style="font-weight:700;font-size:20px;line-height:1.25">{{ card.versus }}</div>
+            <div style="margin-top:8px;font-size:16px;color:#3b3b6b">{{ card.time }} · {{ card.place }}</div>
+            <div style="margin-top:8px"><span style="display:inline-block;background:#060640;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px;padding:4px 10px">{{ card.venueTag }}</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #d9daea">
+        <sc-for list="{{ card.next }}" as="m" hint-placeholder-count="2">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 24px;border-bottom:1px solid #d9daea">
+            <div style="min-width:0">
+              <div style="font-weight:700;font-size:16px">{{ m.date }} · {{ m.label }}</div>
+              <div style="font-size:14px;color:#3b3b6b">{{ m.time }}</div>
+            </div>
+            <span style="flex:0 0 auto;border:1.5px solid #060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:13px;padding:3px 9px">{{ m.tag }}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:auto;padding:8px 24px 12px">
+        <a class="cal-link" href="{{ card.href }}">{{ card.link }} →</a>
+      </div>
+    </article>
+  </sc-if>
+
+  <!-- LISTE D'UNE DISCIPLINE, PAR CATÉGORIE (pages Football, Flag, Cheerleading) -->
+  <sc-if value="{{ showList }}" hint-placeholder-val="{{ false }}">
+    <sc-for list="{{ teamLists }}" as="t" hint-placeholder-count="2">
+      <section style="flex:1 1 420px;min-width:0;background:#ffffff;color:#060640">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 28px;border-bottom:4px solid #fcc409">
+          <h3 style="margin:0;font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:38px;line-height:1">{{ t.title }}</h3>
+          <span style="font-size:15px;font-weight:600;border:1.5px solid #060640;padding:4px 10px;white-space:nowrap">{{ t.countLabel }}</span>
+        </div>
+        <sc-for list="{{ t.rows }}" as="r" hint-placeholder-count="8">
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 28px;border-bottom:1px solid #d9daea;opacity:{{ r.opacity }}">
+            <div style="flex:0 0 112px">
+              <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:32px;line-height:1">{{ r.day }}</div>
+              <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:#3b3b6b">{{ r.monthYear }}</div>
+            </div>
+            <div style="flex:1 1 auto;min-width:0">
+              <div style="font-weight:700;font-size:20px;line-height:1.25">{{ r.title }}</div>
+              <div style="font-size:15px;color:#3b3b6b">{{ r.city }}</div>
+            </div>
+            <sc-if value="{{ r.isHome }}" hint-placeholder-val="{{ true }}">
+              <span style="flex:0 0 auto;background:#060640;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px;padding:5px 11px">Domicile</span>
+            </sc-if>
+            <sc-if value="{{ r.isAway }}" hint-placeholder-val="{{ false }}">
+              <span style="flex:0 0 auto;border:1.5px solid #060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px;padding:3px 10px">Déplacement</span>
+            </sc-if>
+          </div>
+        </sc-for>
+      </section>
+    </sc-for>
+  </sc-if>
+
+  <!-- PAGE CALENDRIER COMPLÈTE : FILTRES + DATES PAR MOIS -->
+  <sc-if value="{{ showPage }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1 1 100%;min-width:0;display:flex;flex-direction:column;gap:28px">
+
+      <div style="background:#ffffff;padding:28px;display:flex;flex-direction:column;gap:22px;border-top:4px solid #fcc409">
+        <div>
+          <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;font-size:15px;letter-spacing:.14em;color:#3b3b6b;margin-bottom:10px">Discipline</div>
+          <div role="group" aria-label="Filtrer par discipline" style="display:flex;flex-wrap:wrap;gap:10px">
+            <sc-for list="{{ discChips }}" as="c" hint-placeholder-count="4">
+              <button type="button" class="cal-chip" aria-pressed="{{ c.pressed }}" onClick="{{ c.pick }}" style="background:{{ c.bg }};color:{{ c.fg }}">{{ c.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <sc-if value="{{ showCats }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;font-size:15px;letter-spacing:.14em;color:#3b3b6b;margin-bottom:10px">Catégorie</div>
+            <div role="group" aria-label="Filtrer par catégorie" style="display:flex;flex-wrap:wrap;gap:10px">
+              <sc-for list="{{ catChips }}" as="c" hint-placeholder-count="3">
+                <button type="button" class="cal-chip" aria-pressed="{{ c.pressed }}" onClick="{{ c.pick }}" style="background:{{ c.bg }};color:{{ c.fg }}">{{ c.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+        <div>
+          <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;font-size:15px;letter-spacing:.14em;color:#3b3b6b;margin-bottom:10px">Type d’événement</div>
+          <div role="group" aria-label="Filtrer par type d’événement" style="display:flex;flex-wrap:wrap;gap:10px">
+            <sc-for list="{{ typeChips }}" as="c" hint-placeholder-count="4">
+              <button type="button" class="cal-chip" aria-pressed="{{ c.pressed }}" onClick="{{ c.pick }}" style="background:{{ c.bg }};color:{{ c.fg }}">{{ c.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div role="status" aria-live="polite" style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:16px;color:#3b3b6b">{{ countLabel }}</div>
+
+      <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
+        <section style="display:flex;flex-direction:column">
+          <h2 style="margin:0 0 14px;font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:44px;line-height:1"><span style="background:#fcc409;padding:0 10px">{{ g.label }}</span></h2>
+          <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="4">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;padding:18px 24px;background:#ffffff;border-bottom:1px solid #d9daea;opacity:{{ r.opacity }}">
+              <div style="flex:0 0 112px;background:#060640;color:#ffffff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 8px;text-align:center">
+                <span style="font-family:'Barlow Condensed',system-ui,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:36px;line-height:.95;color:#fcc409">{{ r.day }}</span>
+                <span style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:15px">{{ r.weekday }}</span>
+              </div>
+              <div style="flex:1 1 260px;min-width:0">
+                <div style="font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:15px;color:#3b3b6b">{{ r.discName }} · {{ r.cat }}</div>
+                <div style="font-weight:700;font-size:22px;line-height:1.25">{{ r.title }}</div>
+                <div style="font-size:16px;color:#3b3b6b">{{ r.time }} · {{ r.place }}</div>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px">
+                <span style="background:{{ r.typeBg }};border:1.5px solid #060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px;padding:3px 10px">{{ r.typeLabel }}</span>
+                <sc-if value="{{ r.isHome }}" hint-placeholder-val="{{ true }}">
+                  <span style="background:#060640;color:#ffffff;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px;padding:5px 11px">Domicile</span>
+                </sc-if>
+                <sc-if value="{{ r.isAway }}" hint-placeholder-val="{{ false }}">
+                  <span style="border:1.5px solid #060640;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px;padding:3px 10px">Déplacement</span>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </section>
+      </sc-for>
+
+      <sc-if value="{{ showEmpty }}" hint-placeholder-val="{{ false }}">
+        <div style="background:#e6e7f2;border:1.5px dashed #8a8bb8;padding:40px 28px;text-align:center;font-family:'Barlow Condensed',system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:22px;color:#3b3b6b;line-height:1.35">{{ emptyMsg }}</div>
+      </sc-if>
+
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"variant":{"editor":null,"default":"all","tsType":"string"},"disc":{"editor":null,"default":"foot","tsType":"string"},"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const variant = this.props.variant || 'all';
+    const disc = this.props.disc || 'foot';
+
+    // =====================================================================
+    // CALENDRIER DU CLUB : modifier ICI, tout le site se met à jour
+    // (page Calendrier, accueil, pages Football / Flag / Cheerleading).
+    //
+    // Une ligne = un événement.
+    //   disc  : foot | flag | cheer
+    //   cat   : catégorie (ex. 'Seniors D1', 'U19', 'Jeunes', 'Minimes'…)
+    //   type  : 'match' | 'tournoi' | 'competition' | 'detection'
+    //   start : AAAA-MM-JJ     end : AAAA-MM-JJ (seulement si sur plusieurs jours)
+    //   opp   : adversaire (type 'match')     name : nom (tournoi / compétition)
+    //   city  : ville ou lieu          time : 'HHhMM' (facultatif)
+    //   home  : true = à domicile, false = déplacement (facultatif pour un tournoi)
+    //
+    // Modèles à copier :
+    //   { disc: 'flag',  cat: 'Jeunes',   type: 'tournoi',     start: '2027-03-20', name: 'Nom du tournoi', city: 'Ville', home: false },
+    //   { disc: 'cheer', cat: 'Seniors',  type: 'competition', start: '2027-02-06', end: '2027-02-07', name: 'Nom de la compétition', city: 'Ville' },
+    //   { disc: 'foot',  cat: 'U19',      type: 'match',       start: '2027-03-06', opp: 'Adversaire', city: 'Ville', home: true },
+    // =====================================================================
+    const events = [
+      // ---------- FOOTBALL AMÉRICAIN ----------
+      // Seniors D1 (2027)
+      { disc: 'foot', cat: 'Seniors D1', type: 'match', start: '2027-01-23', end: '2027-01-24', opp: 'Vikings', city: 'Villeneuve-d’Ascq', home: false },
+      { disc: 'foot', cat: 'Seniors D1', type: 'match', start: '2027-01-30', opp: 'Cougars', city: 'Saint-Ouen-l’Aumône', home: true },
+      { disc: 'foot', cat: 'Seniors D1', type: 'match', start: '2027-02-20', end: '2027-02-21', opp: 'Gladiateurs', city: 'Queue-en-Brie', home: false },
+      { disc: 'foot', cat: 'Seniors D1', type: 'match', start: '2027-03-06', opp: 'Diables Rouges', city: 'Villepinte', home: true },
+      { disc: 'foot', cat: 'Seniors D1', type: 'match', start: '2027-03-20', opp: 'Vikings', city: 'Villeneuve-d’Ascq', home: true },
+      { disc: 'foot', cat: 'Seniors D1', type: 'match', start: '2027-04-03', end: '2027-04-04', opp: 'Cougars', city: 'Saint-Ouen-l’Aumône', home: false },
+      { disc: 'foot', cat: 'Seniors D1', type: 'match', start: '2027-05-08', opp: 'Gladiateurs', city: 'Queue-en-Brie', home: true },
+      { disc: 'foot', cat: 'Seniors D1', type: 'match', start: '2027-05-15', end: '2027-05-16', opp: 'Diables Rouges', city: 'Villepinte', home: false },
+      // Seniors D2 (2027)
+      { disc: 'foot', cat: 'Seniors D2', type: 'match', start: '2027-01-30', end: '2027-01-31', opp: 'Mustangs', city: 'Hénin-Beaumont', home: false },
+      { disc: 'foot', cat: 'Seniors D2', type: 'match', start: '2027-02-13', opp: 'Wildcats', city: 'Reims', home: true },
+      { disc: 'foot', cat: 'Seniors D2', type: 'match', start: '2027-02-27', end: '2027-02-28', opp: 'Coyotes', city: 'Denain', home: false },
+      { disc: 'foot', cat: 'Seniors D2', type: 'match', start: '2027-03-13', end: '2027-03-14', opp: 'Bears', city: 'Roubaix', home: true },
+      { disc: 'foot', cat: 'Seniors D2', type: 'match', start: '2027-04-10', end: '2027-04-11', opp: 'Mustangs', city: 'Hénin-Beaumont', home: true },
+      { disc: 'foot', cat: 'Seniors D2', type: 'match', start: '2027-04-24', end: '2027-04-25', opp: 'Wildcats', city: 'Reims', home: false },
+      { disc: 'foot', cat: 'Seniors D2', type: 'match', start: '2027-05-01', end: '2027-05-02', opp: 'Coyotes', city: 'Denain', home: true },
+      { disc: 'foot', cat: 'Seniors D2', type: 'match', start: '2027-05-15', end: '2027-05-16', opp: 'Bears', city: 'Roubaix', home: false },
+      // ---------- FLAG ----------
+      // Flag jeunes : tournois U13/U15 (2026-2027)
+      { disc: 'flag', cat: 'U13/U15', type: 'tournoi', start: '2026-11-29', name: 'Tournoi U13/U15', city: 'Lille' },
+      { disc: 'flag', cat: 'U13/U15', type: 'tournoi', start: '2027-02-20', end: '2027-02-21', name: 'Tournoi U13/U15', city: '[Lieu à définir]' },
+      { disc: 'flag', cat: 'U13/U15', type: 'tournoi', start: '2027-04-10', end: '2027-04-11', name: 'Tournoi U13/U15', city: '[Lieu à définir]' },
+      { disc: 'flag', cat: 'U13/U15', type: 'tournoi', start: '2027-05-15', end: '2027-05-16', name: 'Tournoi U13/U15', city: '[Lieu à définir]' },
+      { disc: 'flag', cat: 'U13/U15', type: 'tournoi', start: '2027-06-12', end: '2027-06-13', name: 'Tournoi U13/U15', city: '[Lieu à définir]' },
+      // Flag jeunes : détections
+      { disc: 'flag', cat: 'Jeunes', type: 'detection', start: '2027-02-27', end: '2027-02-28', name: 'Détection jeunes', city: '[Lieu à définir]' },
+      { disc: 'flag', cat: 'Jeunes', type: 'detection', start: '2027-03-13', end: '2027-03-14', name: 'Détection jeunes', city: '[Lieu à définir]' },
+      // Flag seniors : à ajouter ici
+      // ---------- CHEERLEADING : à ajouter ici dès que le calendrier est connu ----------
+    ];
+    const HOME_PLACE = 'Stade du Grand Marais';
+
+    // Catégories proposées dans les filtres de la page Calendrier (par discipline).
+    // Une catégorie utilisée dans « events » mais absente d'ici est ajoutée automatiquement.
+    const CATEGORIES = {
+      foot: ['Seniors D1', 'Seniors D2', 'U19', 'U15'],
+      flag: ['U13/U15', 'Jeunes', 'Seniors'],
+      cheer: ['Minimes', 'Cadets', 'Juniors', 'Seniors']
+    };
+    // =====================================================================
+
+    const MONTHS = ['Janv.', 'Févr.', 'Mars', 'Avr.', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'];
+    const MONTHS_FULL = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    const WEEKDAYS = ['Dim.', 'Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'];
+    const DISC_NAME = { foot: 'Football américain', flag: 'Flag', cheer: 'Cheerleading' };
+    const TYPE_LABEL = { match: 'Match', tournoi: 'Tournoi', competition: 'Compétition', detection: 'Détection' };
+
+    const parse = (s) => { const p = s.split('-'); return new Date(parseInt(p[0], 10), parseInt(p[1], 10) - 1, parseInt(p[2], 10)); };
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const typeOf = (m) => m.type || 'match';
+    const titleOf = (m) => (typeOf(m) === 'match' ? 'Spartiates – ' + m.opp : m.name);
+    const endOf = (m) => parse(m.end || m.start);
+    const dayLabel = (m) => (m.end ? parse(m.start).getDate() + '-' + parse(m.end).getDate() : String(parse(m.start).getDate()));
+    const monthLabel = (m) => MONTHS[parse(m.start).getMonth()];
+    const weekdayLabel = (m) => {
+      const a = WEEKDAYS[parse(m.start).getDay()];
+      if (!m.end) return a;
+      const b = WEEKDAYS[parse(m.end).getDay()];
+      return a === b ? a : a + ' – ' + b;
+    };
+    const byStart = (a, b) => (parse(a.start) - parse(b.start)) || a.disc.localeCompare(b.disc) || a.cat.localeCompare(b.cat);
+    const placeOf = (m) => (m.home ? HOME_PLACE : m.city);
+    const timeOf = (m) => m.time || '[Heure]';
+    const plural = (n, one, many) => n + ' ' + (n > 1 ? many : one);
+
+    const INFO = {
+      foot: { name: 'Football américain', kind: 'Prochaine rencontre' },
+      flag: { name: 'Flag', kind: 'Prochain rendez-vous' },
+      cheer: { name: 'Cheerleading', kind: 'Prochaine compétition' }
+    };
+    const info = INFO[disc] || INFO.foot;
+
+    // ---- Carte « Prochaines rencontres » : la prochaine date en grand, les deux suivantes en liste
+    const upcoming = events.filter((m) => m.disc === disc && endOf(m) >= today).sort(byStart);
+    let card;
+    if (upcoming.length) {
+      const f = upcoming[0];
+      card = {
+        category: f.cat,
+        day: dayLabel(f), month: monthLabel(f),
+        isMatch: typeOf(f) === 'match',
+        versus: typeOf(f) === 'match' ? f.opp : f.name,
+        time: timeOf(f), place: placeOf(f),
+        venueTag: typeOf(f) === 'match' ? (f.home ? 'Domicile' : 'Déplacement') : TYPE_LABEL[typeOf(f)],
+        next: upcoming.slice(1, 3).map((m) => ({
+          date: dayLabel(m) + ' ' + monthLabel(m),
+          label: m.cat + ' · ' + (typeOf(m) === 'match' ? m.opp : m.name),
+          time: timeOf(m) + ' · ' + placeOf(m),
+          tag: typeOf(m) === 'match' ? (m.home ? 'Domicile' : 'Déplacement') : TYPE_LABEL[typeOf(m)]
+        }))
+      };
+    } else {
+      const isCheer = disc === 'cheer';
+      card = {
+        category: '[Équipe / catégorie]', day: '[JJ]', month: '[MOIS]',
+        isMatch: !isCheer,
+        versus: isCheer ? '[NOM DE LA COMPÉTITION]' : '[ADVERSAIRE]', time: '[HEURE]', place: '[LIEU]',
+        venueTag: isCheer ? 'Compétition' : 'Domicile',
+        next: [
+          { date: '[JJ/MM]', label: isCheer ? '[Compétition]' : '[Adversaire]', time: '[Heure] · [Lieu]', tag: 'Déplacement' },
+          { date: '[JJ/MM]', label: isCheer ? '[Compétition]' : '[Adversaire]', time: '[Heure] · [Lieu]', tag: 'Domicile' }
+        ]
+      };
+    }
+    card.name = info.name; card.kind = info.kind;
+    card.link = 'Tout le calendrier'; card.href = 'PageCalendrier.dc.html';
+    card.isFoot = disc === 'foot'; card.isFlag = disc === 'flag'; card.isCheer = disc === 'cheer';
+
+    // ---- Liste d'une discipline, par catégorie (pages de discipline)
+    const catKeys = [];
+    events.filter((m) => m.disc === disc).forEach((m) => { if (catKeys.indexOf(m.cat) < 0) catKeys.push(m.cat); });
+    const teamLists = catKeys.map((k) => {
+      const rows = events.filter((m) => m.disc === disc && m.cat === k).sort(byStart).map((m) => ({
+        day: dayLabel(m),
+        monthYear: monthLabel(m) + ' ' + parse(m.start).getFullYear(),
+        title: typeOf(m) === 'match' ? m.opp : m.name, city: m.city,
+        isHome: typeOf(m) === 'match' && m.home === true,
+        isAway: typeOf(m) === 'match' && m.home === false,
+        opacity: endOf(m) < today ? '0.5' : '1'
+      }));
+      return { title: k, countLabel: plural(rows.length, 'date', 'dates'), rows: rows };
+    });
+
+    // ---- Page Calendrier complète : filtres + dates par mois
+    const st = Object.assign({ fDisc: 'all', fCat: 'all', fType: 'all' }, this.state || {});
+    const chip = (label, key, current, onPick) => {
+      const on = key === current;
+      return { label: label, pressed: on ? 'true' : 'false', bg: on ? '#060640' : '#ffffff', fg: on ? '#ffffff' : '#060640', pick: onPick };
+    };
+    const discChips = [{ k: 'all', l: 'Toutes' }, { k: 'foot', l: 'Football américain' }, { k: 'flag', l: 'Flag' }, { k: 'cheer', l: 'Cheerleading' }]
+      .map((o) => chip(o.l, o.k, st.fDisc, () => this.setState({ fDisc: o.k, fCat: 'all' })));
+    const typeChips = [{ k: 'all', l: 'Tous' }, { k: 'match', l: 'Matchs' }, { k: 'tournoi', l: 'Tournois' }, { k: 'competition', l: 'Compétitions' }, { k: 'detection', l: 'Détections' }]
+      .map((o) => chip(o.l, o.k, st.fType, () => this.setState({ fType: o.k })));
+    const showCats = st.fDisc !== 'all';
+    let catChips = [];
+    if (showCats) {
+      const cats = (CATEGORIES[st.fDisc] || []).slice();
+      events.filter((m) => m.disc === st.fDisc).forEach((m) => { if (cats.indexOf(m.cat) < 0) cats.push(m.cat); });
+      catChips = [{ k: 'all', l: 'Toutes' }].concat(cats.map((c) => ({ k: c, l: c })))
+        .map((o) => chip(o.l, o.k, st.fCat, () => this.setState({ fCat: o.k })));
+    }
+
+    const filtered = events.filter((m) =>
+      (st.fDisc === 'all' || m.disc === st.fDisc) &&
+      (st.fCat === 'all' || m.cat === st.fCat) &&
+      (st.fType === 'all' || typeOf(m) === st.fType)
+    ).sort(byStart);
+
+    const groups = [];
+    filtered.forEach((m) => {
+      const d = parse(m.start);
+      const label = MONTHS_FULL[d.getMonth()] + ' ' + d.getFullYear();
+      let g = groups[groups.length - 1];
+      if (!g || g.label !== label) { g = { label: label, rows: [] }; groups.push(g); }
+      const t = typeOf(m);
+      g.rows.push({
+        day: dayLabel(m), weekday: weekdayLabel(m),
+        discName: DISC_NAME[m.disc], cat: m.cat,
+        title: titleOf(m), time: timeOf(m), place: placeOf(m),
+        typeLabel: TYPE_LABEL[t], typeBg: t === 'match' ? '#ffffff' : '#fcc409',
+        isHome: t === 'match' && m.home === true,
+        isAway: t === 'match' && m.home === false,
+        opacity: endOf(m) < today ? '0.5' : '1'
+      });
+    });
+
+    let emptyMsg = '';
+    if (!filtered.length) {
+      const anyForDisc = events.some((m) => st.fDisc === 'all' || m.disc === st.fDisc);
+      emptyMsg = anyForDisc
+        ? 'Aucune date ne correspond à ces filtres.'
+        : '[Calendrier ' + (DISC_NAME[st.fDisc] || '') + ' à venir : dates à communiquer]';
+    }
+
+    return {
+      isAll: variant === 'all',
+      showCard: variant === 'card',
+      showList: variant === 'list' || variant === 'all',
+      showPage: variant === 'page',
+      pad: variant === 'all' ? '64px 32px' : '0',
+      card,
+      teamLists,
+      discChips, typeChips, catChips, showCats,
+      groups,
+      countLabel: plural(filtered.length, 'date', 'dates'),
+      showEmpty: filtered.length === 0,
+      emptyMsg
+    };
+  }
+}
+</script>
+</body>
+</html>
