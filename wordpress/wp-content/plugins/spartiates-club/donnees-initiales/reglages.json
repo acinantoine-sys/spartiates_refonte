@@ -1,0 +1,23 @@
+{
+  "lieu_domicile": "Stade du Grand Marais",
+  "chiffres": {
+    "finales_nationales": "6",
+    "benevoles": "40",
+    "licencies": "300",
+    "jours_de_match": "[XX]"
+  },
+  "coordonnees": {
+    "telephone": "03 22 52 99 24",
+    "email": "secretariat@lesspartiates.com",
+    "lieu": "Stade du Grand Marais",
+    "rue": "37 Rue du Grand Marais",
+    "ville": "80080 Amiens"
+  },
+  "reseaux": {
+    "instagram": "https://www.instagram.com/spartiatesfoot/",
+    "instagram_compte": "@spartiatesfoot",
+    "facebook": "https://www.facebook.com/spartiatesfoot/",
+    "youtube": "https://www.youtube.com/@LesSpartiatesdAmiens",
+    "tiktok": "https://www.tiktok.com/@spartiatesamiens"
+  }
+}

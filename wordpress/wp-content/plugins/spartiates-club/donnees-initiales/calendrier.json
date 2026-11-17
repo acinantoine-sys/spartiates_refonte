@@ -1,0 +1,241 @@
+{
+  "lieu_domicile": "Stade du Grand Marais",
+  "categories": {
+    "foot": [
+      "Seniors D1",
+      "Seniors D2",
+      "U19",
+      "U15"
+    ],
+    "flag": [
+      "U13/U15",
+      "Jeunes",
+      "Seniors"
+    ],
+    "cheer": [
+      "Minimes",
+      "Cadets",
+      "Juniors",
+      "Seniors"
+    ]
+  },
+  "evenements": [
+    {
+      "disc": "foot",
+      "cat": "Seniors D1",
+      "type": "match",
+      "start": "2027-01-23",
+      "end": "2027-01-24",
+      "opp": "Vikings",
+      "city": "Villeneuve-d’Ascq",
+      "home": false
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D1",
+      "type": "match",
+      "start": "2027-01-30",
+      "opp": "Cougars",
+      "city": "Saint-Ouen-l’Aumône",
+      "home": true
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D1",
+      "type": "match",
+      "start": "2027-02-20",
+      "end": "2027-02-21",
+      "opp": "Gladiateurs",
+      "city": "Queue-en-Brie",
+      "home": false
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D1",
+      "type": "match",
+      "start": "2027-03-06",
+      "opp": "Diables Rouges",
+      "city": "Villepinte",
+      "home": true
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D1",
+      "type": "match",
+      "start": "2027-03-20",
+      "opp": "Vikings",
+      "city": "Villeneuve-d’Ascq",
+      "home": true
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D1",
+      "type": "match",
+      "start": "2027-04-03",
+      "end": "2027-04-04",
+      "opp": "Cougars",
+      "city": "Saint-Ouen-l’Aumône",
+      "home": false
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D1",
+      "type": "match",
+      "start": "2027-05-08",
+      "opp": "Gladiateurs",
+      "city": "Queue-en-Brie",
+      "home": true
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D1",
+      "type": "match",
+      "start": "2027-05-15",
+      "end": "2027-05-16",
+      "opp": "Diables Rouges",
+      "city": "Villepinte",
+      "home": false
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D2",
+      "type": "match",
+      "start": "2027-01-30",
+      "end": "2027-01-31",
+      "opp": "Mustangs",
+      "city": "Hénin-Beaumont",
+      "home": false
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D2",
+      "type": "match",
+      "start": "2027-02-13",
+      "opp": "Wildcats",
+      "city": "Reims",
+      "home": true
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D2",
+      "type": "match",
+      "start": "2027-02-27",
+      "end": "2027-02-28",
+      "opp": "Coyotes",
+      "city": "Denain",
+      "home": false
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D2",
+      "type": "match",
+      "start": "2027-03-13",
+      "end": "2027-03-14",
+      "opp": "Bears",
+      "city": "Roubaix",
+      "home": true
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D2",
+      "type": "match",
+      "start": "2027-04-10",
+      "end": "2027-04-11",
+      "opp": "Mustangs",
+      "city": "Hénin-Beaumont",
+      "home": true
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D2",
+      "type": "match",
+      "start": "2027-04-24",
+      "end": "2027-04-25",
+      "opp": "Wildcats",
+      "city": "Reims",
+      "home": false
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D2",
+      "type": "match",
+      "start": "2027-05-01",
+      "end": "2027-05-02",
+      "opp": "Coyotes",
+      "city": "Denain",
+      "home": true
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors D2",
+      "type": "match",
+      "start": "2027-05-15",
+      "end": "2027-05-16",
+      "opp": "Bears",
+      "city": "Roubaix",
+      "home": false
+    },
+    {
+      "disc": "flag",
+      "cat": "U13/U15",
+      "type": "tournoi",
+      "start": "2026-11-29",
+      "name": "Tournoi U13/U15",
+      "city": "Lille"
+    },
+    {
+      "disc": "flag",
+      "cat": "U13/U15",
+      "type": "tournoi",
+      "start": "2027-02-20",
+      "end": "2027-02-21",
+      "name": "Tournoi U13/U15",
+      "city": "[Lieu à définir]"
+    },
+    {
+      "disc": "flag",
+      "cat": "U13/U15",
+      "type": "tournoi",
+      "start": "2027-04-10",
+      "end": "2027-04-11",
+      "name": "Tournoi U13/U15",
+      "city": "[Lieu à définir]"
+    },
+    {
+      "disc": "flag",
+      "cat": "U13/U15",
+      "type": "tournoi",
+      "start": "2027-05-15",
+      "end": "2027-05-16",
+      "name": "Tournoi U13/U15",
+      "city": "[Lieu à définir]"
+    },
+    {
+      "disc": "flag",
+      "cat": "U13/U15",
+      "type": "tournoi",
+      "start": "2027-06-12",
+      "end": "2027-06-13",
+      "name": "Tournoi U13/U15",
+      "city": "[Lieu à définir]"
+    },
+    {
+      "disc": "flag",
+      "cat": "Jeunes",
+      "type": "detection",
+      "start": "2027-02-27",
+      "end": "2027-02-28",
+      "name": "Détection jeunes",
+      "city": "[Lieu à définir]"
+    },
+    {
+      "disc": "flag",
+      "cat": "Jeunes",
+      "type": "detection",
+      "start": "2027-03-13",
+      "end": "2027-03-14",
+      "name": "Détection jeunes",
+      "city": "[Lieu à définir]"
+    }
+  ]
+}

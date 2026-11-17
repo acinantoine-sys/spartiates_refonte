@@ -30,3 +30,23 @@ Ces éléments apparaissent dans les maquettes entre crochets. Il ne faut pas le
 - Crédits des photographes (par exemple ByDG_Photo).
 - Accord des sponsors visibles sur les photos (maillots).
 - Mentions légales et politique de confidentialité du nouveau site.
+
+## Où les compléter dans WordPress
+
+Les emplacements restent visibles sur le site, entre crochets, tant qu'ils ne sont pas remplacés.
+
+| Élément | Où |
+|---|---|
+| Heures et lieux des rencontres, nouvelles dates (flag seniors, cheerleading, U19, U15) | Spartiates > Calendrier, sans aide technique |
+| Logos, noms et sites des partenaires privés | Spartiates > Partenaires, sans aide technique |
+| Année de la participation européenne (`[Année]`) | Spartiates > Histoire du club, sans aide technique |
+| Jours de match par saison (`[XX]`), finales nationales | Spartiates > Adhésion et réglages, sans aide technique |
+| Mentions légales et politique de confidentialité | Pages > Mentions légales, sans aide technique |
+| Textes des pages (modalités d'essai, âges du cheerleading, uniforme, accès et stationnement, photo d'archives) | Dans les gabarits du thème : une intervention technique est nécessaire |
+| Flux Instagram et carte interactive | Intervention technique, une fois l'outil choisi |
+
+## Décisions à prendre (ajoutées au début du développement)
+
+- Choix de l'hébergeur (PHP 7.4 ou plus, MySQL ou MariaDB, HTTPS).
+- Validation des écarts avec les maquettes listés dans `docs/06-developpement-wordpress.md`, en particulier l'affichage des dates passées.
+- Relecture des descriptions pour les moteurs de recherche et du texte de la page 404.

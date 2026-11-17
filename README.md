@@ -14,13 +14,16 @@ Le club : association de sports américains fondée à Amiens en 1987. Trois dis
 | `design/captures/` | Une capture pleine page de chaque page, pour référence visuelle rapide |
 | `design/video-demo-codir.mp4` | La vidéo de démonstration présentée au comité directeur |
 | `assets/` | Logo du club (SVG et PNG), photos optimisées pour le web, logos des partenaires |
+| `wordpress/wp-content/` | Le site WordPress : extension `spartiates-club` (données et administration) et thème `spartiates` (mise en forme) |
+| `tests/` | Tests des règles de calcul : `php tests/logique.php` |
+| `outils/apercu/` | Aperçu statique du thème sans WordPress, pour contrôler la mise en page |
 | `CLAUDE.md` | Les consignes lues automatiquement par Claude au début de chaque session de développement |
 
 ## Par où commencer
 
 1. Lire `docs/01-pages-et-contenus.md` puis `docs/03-sources-uniques.md`.
-2. Trancher le choix technique décrit dans `docs/04-choix-technique.md`.
-3. Développer page par page en suivant les maquettes et la charte (`docs/02-charte-graphique.md`).
+2. Le choix technique est fait : **WordPress** (`docs/04-choix-technique.md`).
+3. Installation, administration, tests et écarts à valider : `docs/06-developpement-wordpress.md`.
 
 ## Note sur les captures
 

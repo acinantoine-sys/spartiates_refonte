@@ -1,0 +1,213 @@
+{
+  "resultats": [
+    {
+      "disc": "foot",
+      "cat": "Seniors",
+      "annee": "2004",
+      "titre": "Champion de France D1",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors",
+      "annee": "2010",
+      "titre": "Champion de France D1",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors",
+      "annee": "2012",
+      "titre": "Champion de France D1",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors",
+      "annee": "1997",
+      "titre": "Champion de France D2",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors",
+      "annee": "2018",
+      "titre": "Champion de France D2",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "foot",
+      "cat": "Seniors",
+      "annee": "2026",
+      "titre": "Champion de France D2",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "foot",
+      "cat": "U19",
+      "annee": "1999",
+      "titre": "Champion de France",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": "Champion de France Football U19"
+    },
+    {
+      "disc": "foot",
+      "cat": "U19",
+      "annee": "2010",
+      "titre": "Champion de France",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": "Champion de France Football U19"
+    },
+    {
+      "disc": "foot",
+      "cat": "U19",
+      "annee": "2011",
+      "titre": "Champion de France",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": "Champion de France Football U19"
+    },
+    {
+      "disc": "foot",
+      "cat": "U17",
+      "annee": "2025",
+      "titre": "Champion territorial Île-de-France",
+      "classement": "",
+      "note": "",
+      "titre_national": false,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "flag",
+      "cat": "Senior",
+      "annee": "2009",
+      "titre": "Champion de France",
+      "classement": "",
+      "note": "",
+      "titre_national": true,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "cheer",
+      "cat": "Juniors",
+      "annee": "2026",
+      "titre": "SALC",
+      "classement": "2e",
+      "note": "Qualification aux championnats d’Europe",
+      "titre_national": false,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "cheer",
+      "cat": "Minimes",
+      "annee": "2026",
+      "titre": "SALC",
+      "classement": "10e",
+      "note": "",
+      "titre_national": false,
+      "page_club": false,
+      "libelle_club": ""
+    },
+    {
+      "disc": "cheer",
+      "cat": "Juniors",
+      "annee": "2026",
+      "titre": "Qualifications au championnat de France",
+      "classement": "3e",
+      "note": "",
+      "titre_national": false,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "cheer",
+      "cat": "Minimes",
+      "annee": "2026",
+      "titre": "Qualifications au championnat de France",
+      "classement": "5e",
+      "note": "",
+      "titre_national": false,
+      "page_club": false,
+      "libelle_club": ""
+    },
+    {
+      "disc": "cheer",
+      "cat": "Juniors",
+      "annee": "2025",
+      "titre": "Qualifications aux championnats de France",
+      "classement": "4e",
+      "note": "",
+      "titre_national": false,
+      "page_club": true,
+      "libelle_club": ""
+    },
+    {
+      "disc": "cheer",
+      "cat": "Cadets",
+      "annee": "2025",
+      "titre": "Open Cheer Center",
+      "classement": "5e",
+      "note": "",
+      "titre_national": false,
+      "page_club": false,
+      "libelle_club": ""
+    },
+    {
+      "disc": "cheer",
+      "cat": "Juniors",
+      "annee": "2025",
+      "titre": "Open Cheer Center",
+      "classement": "5e",
+      "note": "",
+      "titre_national": false,
+      "page_club": false,
+      "libelle_club": ""
+    },
+    {
+      "disc": "cheer",
+      "cat": "Juniors",
+      "annee": "2024",
+      "titre": "Open Cheer Center",
+      "classement": "2e",
+      "note": "",
+      "titre_national": false,
+      "page_club": true,
+      "libelle_club": ""
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+Polices Barlow et Barlow Condensed, par Jeremy Tribby.
+Licence : SIL Open Font License 1.1 (https://openfontlicense.org).
+Source : Google Fonts, sous-ensembles latin et latin-ext, hébergées localement (pas d’appel à Google depuis le site).

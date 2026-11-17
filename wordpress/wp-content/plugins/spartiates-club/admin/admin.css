@@ -1,0 +1,18 @@
+/* Administration des Spartiates : formulaires simples pour les bénévoles. */
+.spa-champs { display: grid; gap: 18px; max-width: 760px; padding: 6px 0; }
+.spa-champ label { display: block; font-weight: 600; margin-bottom: 4px; }
+.spa-champ--checkbox label, .spa-radio { font-weight: 400; display: block; margin: 4px 0; }
+.spa-champ fieldset legend { font-weight: 600; margin-bottom: 4px; }
+.spa-champ .regular-text, .spa-champ select, .spa-champ textarea { width: 100%; max-width: 32em; }
+.spa-champ .description { margin-top: 4px; }
+.spa-requis { color: #b32d2e; }
+.spa-intro { font-size: 14px; max-width: 760px; }
+.spa-page h2 { margin-top: 2em; }
+.spa-rubrique { background: #fff; border: 1px solid #c3c4c7; padding: 4px 20px 20px; margin: 20px 0; max-width: 800px; }
+.spa-rubrique .spa-champ { margin-top: 14px; }
+.spa-rubrique--adhesion { border-left: 4px solid #fcc409; }
+.spa-table-entrainements input { width: 100%; }
+.spa-table-entrainements .small-text { max-width: 6em; }
+.spa-apercu { max-width: 480px; }
+.spa-passe { color: #646970; }
+.spa-cache { display: none; }

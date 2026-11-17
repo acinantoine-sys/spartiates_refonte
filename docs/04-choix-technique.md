@@ -1,6 +1,6 @@
 # 4. Choix technique
 
-**Décision : à prendre par le club avant le début du développement.**
+**Décision : WordPress** (17 novembre 2026). Hébergement encore à choisir.
 
 ## Les deux options
 
@@ -30,7 +30,9 @@
 
 ## Décision
 
-- [ ] WordPress
+- [x] WordPress
 - [ ] Site statique
-- Hébergement :
-- Décidé le :
+- Hébergement : à choisir (PHP 7.4 ou plus, MySQL ou MariaDB, HTTPS)
+- Décidé le : 17 novembre 2026
+
+La mise en œuvre est décrite dans `docs/06-developpement-wordpress.md`.
